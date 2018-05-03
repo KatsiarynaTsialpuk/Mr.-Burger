@@ -1,0 +1,28 @@
+@mixin font-size($sizeValue) {
+  font-size: ($sizeValue) + px;
+  font-size: $sizeValue/16 + rem;
+}
+
+//mixin for line-height
+
+@mixin line-height($heightValue) {
+  line-height: ($heightValue) + px;
+  line-height: $heightValue/16 + rem;
+}
+
+//mixin for circle
+
+@mixin circle($width, $color) {
+  width: $width;
+  height: $width;
+  border-radius: $width/2;
+  background-color: $color;
+}
+
+//mixin for background
+
+@mixin bg() {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}

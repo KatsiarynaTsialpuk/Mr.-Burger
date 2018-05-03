@@ -1,0 +1,91 @@
+.team {
+  //@include bg;
+  background: url("../img/bg_team.jpg") no-repeat center;
+  background-size: cover;
+  position: relative;
+
+  &__wrapper {
+    height: 100%;
+    width: 50%;
+    padding: 115px 100px;
+    background-color: rgba(47, 50, 52, .7);
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  &__content {
+    margin: 0 auto;
+  }
+}
+
+.accordeon {
+  &__name {
+    @include font-size(14);
+    @include line-height(28);
+
+    color: $white;
+    font-weight: 400;
+    text-align: left;
+    font-family: $secondary-font;
+    margin-bottom: 40px;
+    position: relative;
+
+    &::before {
+      content: "";
+      border: 5px solid transparent;
+      border-top: 7px solid $yellow;
+      position: absolute;
+      bottom: 5px;
+      left: -20px;
+    }
+  }
+
+  &__desc {
+    height: 0;
+    overflow: hidden;
+    //display: none;
+  }
+
+  &__content_active {
+    .accordeon__name {
+      color: $yellow;
+
+      &::before {
+        border: 5px solid transparent;
+        border-bottom: 7px solid $yellow;
+        bottom: 10px;
+      }
+    }
+
+    .accordeon__desc {
+      height: 100%;
+      display: flex;
+      margin-bottom: 40px;
+
+      &_img {
+        width: 115px;
+        height: 115px;
+        border-radius: 50%;
+        background-position: center center;
+        background-size: cover;
+        flex-shrink: 0;
+        margin-right: 20px;
+      }
+
+      &_title,
+      &_paragraph {
+        @include font-size(14);
+        @include line-height(24);
+
+        font-family: $main-font;
+        font-weight: 900;
+        color: $white;
+      }
+
+      &_paragraph {
+        font-weight: 300;
+      }
+    }
+  }
+}

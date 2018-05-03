@@ -1,0 +1,50 @@
+.about {
+  background: url("../img/bg_about.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    width: 33.3%;
+    text-align: center;
+    align-self: baseline;
+    padding: 0 10px;
+  }
+
+}
+
+.desc {
+  &__img {
+    height: auto;
+    max-height: 90px;
+    max-width: 97px;
+    width: inherit;
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    @include font-size(24);
+    @include line-height(28);
+
+    font-family: $head-font;
+    color: $gray;
+    display: block;
+    margin-bottom: 25px;
+  }
+
+  &__text {
+    @include font-size(14);
+    @include line-height(24);
+
+    font-family: $main-font;
+    font-weight: 300;
+  }
+}
