@@ -1,12 +1,38 @@
+//mixins for fonts
+
+@mixin gagalin() {
+  font-family: 'Gagalin', Helvetica, sans-serif;
+}
+
+@mixin ubuntu($style: light) {
+font-family: 'Ubuntu', Helvetica, sans-serif;
+
+  @if $style == light {
+    font-weight: 300;
+  }
+
+  @if $style == medium {
+    font-weight: 700;
+  }
+
+  @if $style == bold {
+    font-weight: 900;
+  }
+}
+
+@mixin lifehack() {
+  font-family: 'Lifehack';
+}
+
+//mixin for font-size
+
 @mixin font-size($sizeValue) {
-  font-size: ($sizeValue) + px;
   font-size: $sizeValue/16 + rem;
 }
 
 //mixin for line-height
 
 @mixin line-height($heightValue) {
-  line-height: ($heightValue) + px;
   line-height: $heightValue/16 + rem;
 }
 
@@ -22,7 +48,13 @@
 //mixin for background
 
 @mixin bg() {
-  background-size: cover;
   background-position: center center;
+  background-size: cover;
   background-repeat: no-repeat;
+}
+
+//function for rem
+
+@function rem($px) {
+  @return ($px/16px) + 0rem;
 }

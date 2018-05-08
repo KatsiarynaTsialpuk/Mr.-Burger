@@ -1,0 +1,66 @@
+.menu {
+  background: url("../img/bg_menu.jpg") center center / cover no-repeat;
+  position: relative;
+
+  &__accordeon {
+    display: flex;
+    justify-content: flex-end;
+    height: 100%;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: flex-end;
+
+    &_active {
+      width: auto;
+      display: flex;
+
+      .menu__desc {
+        width: 540px;
+      }
+
+      .menu__title_text {
+        color: $yellow;
+      }
+    }
+  }
+
+  &__desc {
+    @include font-size(14);
+    @include line-height(24);
+
+    font-family: $main-font;
+    font-weight: 300;
+    color: $white;
+    background-color: rgba(47, 50, 52, .93);
+    width: 0;
+    overflow: hidden;
+    transition: width 2s;
+
+    &_text {
+      padding: 60px 30px;
+      min-width: 540px;
+    }
+  }
+
+  &__title {
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 80px;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 35px;
+
+    &_text {
+      @include font-size(40);
+      @include line-height(64);
+
+      font-family: $secondary-font;
+      color: $white;
+      transform: rotate(-90deg);
+      white-space: nowrap;
+      width: 100%;
+    }
+  }
+}

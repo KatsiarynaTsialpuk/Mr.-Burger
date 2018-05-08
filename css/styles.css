@@ -1,0 +1,10 @@
+.title {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%);
+    left: 50%;
+    font-size: 14px;
+    font-weight: 300;
+    font-family: "Helvetica", sans-serif;
+    color: #595a59;
+}

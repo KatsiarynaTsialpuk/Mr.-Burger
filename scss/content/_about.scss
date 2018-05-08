@@ -1,8 +1,5 @@
 .about {
-  background: url("../img/bg_about.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: url("../img/bg_about.jpg") center center / cover no-repeat;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -40,7 +37,7 @@
     margin-bottom: 25px;
   }
 
-  &__text {
+  &__text_content {
     @include font-size(14);
     @include line-height(24);
 

@@ -1,5 +1,5 @@
 .intro {
-  @include bg;
+  @include bg();
 
   background-image: url("../img/bg_main.jpg");
   position: relative;
@@ -21,7 +21,7 @@
   }
 
   &__content {
-    width: 100%;
+    // width: 100%;
     display: flex;
     flex-wrap: wrap;
     flex-grow: 1;
@@ -36,6 +36,10 @@
 
   &__img {
     align-items: center;
+
+    &_item {
+      max-width: 100%;
+    }
   }
 
   &__desc {
@@ -54,8 +58,6 @@
 }
 
 .logo {
-  margin-right: auto;
-
   &__link {
     display: block;
   }
@@ -63,6 +65,7 @@
 
 .nav {
   margin-right: 15px;
+  margin-left: auto;
 
   &__list {
     display: flex;
@@ -72,7 +75,7 @@
     display: flex;
     align-items: center;
 
-     &:after {
+    &:after {
       @include circle(5px, $white);
 
       content: ' ';
