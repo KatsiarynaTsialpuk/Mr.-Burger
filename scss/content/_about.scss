@@ -13,18 +13,22 @@
     width: 33.3%;
     text-align: center;
     align-self: baseline;
-    padding: 0 10px;
+    padding: 0 rem(10px);
+
+    @include phone {
+      width: 100%;
+    }
   }
 
 }
 
 .desc {
-  &__img {
+  &__img-item {
     height: auto;
-    max-height: 90px;
-    max-width: 97px;
+    max-height: rem(90px);
+    max-width: rem(97px);
     width: inherit;
-    margin-bottom: 40px;
+    margin-bottom: rem(40px);
   }
 
   &__title {
@@ -34,7 +38,15 @@
     font-family: $head-font;
     color: $gray;
     display: block;
-    margin-bottom: 25px;
+    margin-bottom: rem(25px);
+  }
+
+  &__text {
+    @include phone {
+      text-align: left;
+      padding-left: rem(20px);
+      margin-bottom: rem(20px);
+    }
   }
 
   &__text_content {
@@ -43,5 +55,10 @@
 
     font-family: $main-font;
     font-weight: 300;
+  }
+
+  @include phone {
+    display: flex;
+    flex-direction: row;
   }
 }

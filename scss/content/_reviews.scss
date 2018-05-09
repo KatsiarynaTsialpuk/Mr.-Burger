@@ -9,6 +9,10 @@
 
   &__item {
     flex-basis: 25%;
+
+    @include tablet {
+      flex-basis: 50%;
+    }
   }
 }
 
@@ -39,11 +43,15 @@
     transform: translate(-50%, -50%) scale(.7);
     opacity: 0;
     transition: .5s;
-    padding: 0 20px;
+    padding: 0 rem(20px);
     background-color: rgba(20, 20, 20, .8);
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    @include tablet {
+      align-items: center;
+    }
   }
 
   &__title {
@@ -51,8 +59,13 @@
     @include line-height(28);
 
     font-family: $secondary-font;
-    margin-bottom: 15px;
+    margin-bottom: rem(15px);
     color: $white;
+
+    @include phone {
+      @include font-size(24);
+      text-align: center;
+    }
   }
 
   &__desc {
@@ -62,6 +75,14 @@
     color: $white;
     font-family: $main-font;
     font-weight: 300;
-    margin-bottom: 20px;
+    margin-bottom: rem(20px);
+
+    @include tablet {
+      text-align: center;
+    }
+
+    @include phone {
+      display: none;
+    }
   }
 }

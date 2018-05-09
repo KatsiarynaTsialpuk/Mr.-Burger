@@ -58,3 +58,17 @@ font-family: 'Ubuntu', Helvetica, sans-serif;
 @function rem($px) {
   @return ($px/16px) + 0rem;
 }
+
+//media
+
+@mixin tablet {
+  @media screen and (max-width: $tablet)  {
+    @content;
+  }
+}
+
+@mixin phone {
+  @media screen and (max-width: $phone)  {
+    @content;
+  }
+}

@@ -1,6 +1,5 @@
 .wrapper {
   width: 100%;
-  min-width: 960px;
   min-height: 100%;
   position: relative;
   overflow: hidden;
@@ -8,17 +7,18 @@
 
 .container {
   width: 95%;
-  max-width: 940px;
+  max-width: rem(940px);
   margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  position: relative;
 }
 
 .section {
   height: 100vh;
-  min-height: 650px;
+  min-height: rem(650px);
 
   &__title {
     @include font-size(72);
@@ -27,21 +27,25 @@
     font-family: $secondary-font;
     font-weight: 400;
     color: $yellow;
-    margin-bottom: 20px;
+    margin-bottom: rem(20px);
 
     &_gray {
       color: $gray;
     }
 
     &_margin-bottom {
-      margin-bottom: 60px;
+      margin-bottom: rem(60px);
     }
 
     &_white {
       color: $white;
       position: absolute;
-      top: 110px;
-      left: 100px;
+      top: rem(110px);
+      left: rem(100px);
+
+      @include phone {
+        z-index: -1;
+      }
     }
 
     &_center {
@@ -55,8 +59,8 @@
   @include font-size(13);
   @include line-height(20);
 
-  min-width: 98px;
-  padding: 8px 17px;
+  min-width: rem(98px);
+  padding: rem(8px) rem(17px);
   border-radius: 5px;
   background-color: $orange;
   color: $white;
@@ -70,7 +74,7 @@
   }
 
   &_gray {
-    width: 110px;
+    width: rem(110px);
     background-color: $gray;
     color: $white;
 
@@ -94,7 +98,7 @@
 //pagination
 .pagination {
   position: fixed;
-  top: 90px;
+  top: rem(90px);
   right: 4%;
   z-index: 100;
 
@@ -140,6 +144,10 @@
       background: transparent;
       border: 1px solid $white;
     }
+  }
+
+  @include tablet {
+    display: none;
   }
 }
 
