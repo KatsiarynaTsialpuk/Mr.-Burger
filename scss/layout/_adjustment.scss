@@ -39,9 +39,9 @@
 
     &_white {
       color: $white;
-      position: absolute;
-      top: rem(110px);
-      left: rem(100px);
+      //position: absolute;
+      //top: rem(110px);
+      //left: rem(100px);
 
       @include phone {
         z-index: -1;
@@ -159,6 +159,22 @@
 
   @include tablet {
     display: none;
+  }
+}
+
+//arrow
+.arrow {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transition: .5s;
+
+  &__img_left {
+    transform: rotate(90deg);
+  }
+
+  &__img_right {
+    transform: rotate(-90deg);
   }
 }
 

@@ -1,6 +1,120 @@
 .slider {
   background: #f9b43b; /* Old browsers */
   background: -moz-linear-gradient(left, $yellow 0%, $light-orange 48%, $yellow 74%);
-  background: -webkit-linear-gradient(left, $yellow 0%,$light-orange 48%,$yellow 74%);
-  background: linear-gradient(to right, $yellow 0%,$light-orange 48%,$yellow 74%);
+  background: -webkit-linear-gradient(left, $yellow 0%, $light-orange 48%, $yellow 74%);
+  background: linear-gradient(to right, $yellow 0%, $light-orange 48%, $yellow 74%);
+  display: flex;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 0 rem(30px);
+
+    @include phone {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+  &__compos {
+    background: $dark-yellow;
+    border-radius: rem(4px);
+    width: rem(90px);
+    height: rem(90px);
+    position: absolute;
+    top: rem(-50px);
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+  &_text {
+    @include font-size(14);
+    @include gagalin();
+
+    color: $white;
+  }
+}
+
+  &__kkal {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    &_num,
+    &_desc {
+      @include font-size(14);
+      @include gagalin();
+
+      color: $light-yellow;
+    }
+
+    &_desc {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translate(-50%);
+    }
+
+    &_num {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    @include phone {
+      right: 0;
+      top: -3.125rem;
+      bottom: inherit;
+      left: inherit;
+    }
+  }
+
+&__burger,
+&__desc {
+  width: rem(480px);
+}
+
+&__burger_img {
+  max-width: 100%;
+}
+
+&__text {
+  @include font-size(14);
+  @include line-height(24);
+  @include ubuntu(light);
+
+  color: $white;
+}
+
+&__cost {
+  display: flex;
+  align-items: baseline;
+
+  @include phone {
+    justify-content: center;
+  }
+}
+
+&__price {
+  @include font-size(30);
+  @include gagalin();
+
+  color: $orange;
+  margin-right: rem(30px);
+
+  &_num {
+    @include font-size(72);
+  }
+}
+
 }
