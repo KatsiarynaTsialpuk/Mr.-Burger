@@ -30,8 +30,18 @@
     font-family: $main-font;
   }
 
-  &__right {
-    text-align: right;
+  &__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  &__item {
+    margin-right: rem(20px);
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 
   &__link {

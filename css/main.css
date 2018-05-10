@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: 'Ubuntu';
   src: url("../fonts/ubuntu-b-webfont.woff2") format("woff2");
@@ -167,11 +168,19 @@ table {
   .order-btn:hover {
     background-color: #ce401a; }
   .order-btn_gray {
-    width: 6.875rem;
+    width: 110px;
     background-color: #2f3234;
-    color: #fff; }
+    color: #fff;
+    text-align: center; }
     .order-btn_gray:hover {
       background-color: #232527; }
+    .order-btn_gray::before {
+      content: "Подробнее";
+      display: block; }
+      @media screen and (max-width: 480px) {
+        .order-btn_gray::before {
+          content: "Читать отзыв";
+          white-space: nowrap; } }
   .order-btn_reset {
     background: transparent;
     border: none;
@@ -824,6 +833,11 @@ table {
         border-width: 0 3px 3px 0;
         -webkit-transform: rotate(45deg);
         transform: rotate(45deg); }
+      .form__block_label:last-child {
+        margin-right: 100px; }
+        @media screen and (max-width: 480px) {
+          .form__block_label:last-child {
+            margin-right: 0; } }
   .form__title {
     font-size: 0.875rem;
     line-height: 1.5rem;
@@ -903,8 +917,21 @@ table {
     font-size: 0.875rem;
     line-height: 1.5rem;
     font-family: "Ubuntu", Arial, sans-serif; }
-  .footer__right {
-    text-align: right; }
+  .footer__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end; }
+  .footer__item {
+    margin-right: 1.25rem; }
+    .footer__item:last-child {
+      margin-right: 0; }
   .footer__link {
     margin-right: 1.25rem; }
     .footer__link:last-child {
@@ -929,5 +956,11 @@ table {
       width: 100%;
       height: auto;
       margin-right: 0.625rem; }
+
+.slider {
+  background: #f9b43b;
+  /* Old browsers */
+  background: -webkit-gradient(linear, left top, right top, from(#f9b43b), color-stop(48%, #eb8c38), color-stop(74%, #f9b43b));
+  background: linear-gradient(to right, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%); }
 
 /*# sourceMappingURL=main.css.map */

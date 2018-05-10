@@ -1,0 +1,6 @@
+.slider {
+  background: #f9b43b; /* Old browsers */
+  background: -moz-linear-gradient(left, $yellow 0%, $light-orange 48%, $yellow 74%);
+  background: -webkit-linear-gradient(left, $yellow 0%,$light-orange 48%,$yellow 74%);
+  background: linear-gradient(to right, $yellow 0%,$light-orange 48%,$yellow 74%);
+}

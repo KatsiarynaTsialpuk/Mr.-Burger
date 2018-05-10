@@ -74,12 +74,23 @@
   }
 
   &_gray {
-    width: rem(110px);
+    width: 110px;
     background-color: $gray;
     color: $white;
+    text-align: center;
 
     &:hover {
       background-color: darken($gray, 5%);
+    }
+
+    &::before {
+      content: "Подробнее";
+      display: block;
+
+      @include phone {
+        content: "Читать отзыв";
+        white-space: nowrap;
+      }
     }
   }
 

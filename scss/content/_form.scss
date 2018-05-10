@@ -77,6 +77,14 @@
         -ms-transform: rotate(45deg);
         transform: rotate(45deg);
       }
+
+      &:last-child {
+        margin-right: 100px;
+
+        @include phone {
+          margin-right: 0;
+        }
+      }
     }
   }
 
