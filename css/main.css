@@ -992,6 +992,13 @@ table {
             align-items: center;
     position: relative;
     padding: 0 1.875rem; }
+    @media screen and (max-width: 768px) {
+      .slider__content {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        text-align: center; } }
     @media screen and (max-width: 480px) {
       .slider__content {
         -webkit-box-orient: vertical;
@@ -1047,6 +1054,12 @@ table {
       left: 50%;
       -webkit-transform: translate(-50%, -50%);
               transform: translate(-50%, -50%); }
+    @media screen and (max-width: 768px) {
+      .slider__kkal {
+        right: 0;
+        top: -3.125rem;
+        bottom: inherit;
+        left: inherit; } }
     @media screen and (max-width: 480px) {
       .slider__kkal {
         right: 0;
@@ -1055,6 +1068,9 @@ table {
         left: inherit; } }
   .slider__burger, .slider__desc {
     width: 30rem; }
+    @media screen and (max-width: 768px) {
+      .slider__burger, .slider__desc {
+        width: 100%; } }
     @media screen and (max-width: 480px) {
       .slider__burger, .slider__desc {
         width: 100%; } }
@@ -1070,17 +1086,19 @@ table {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: baseline;
-        -ms-flex-align: baseline;
-            align-items: baseline; }
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    @media screen and (max-width: 768px) {
+      .slider__cost {
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center; } }
     @media screen and (max-width: 480px) {
       .slider__cost {
         -webkit-box-pack: center;
             -ms-flex-pack: center;
-                justify-content: center;
-        -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center; } }
+                justify-content: center; } }
   .slider__price {
     font-size: 1.875rem;
     font-family: 'Gagalin', Helvetica, sans-serif;

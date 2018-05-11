@@ -17,6 +17,11 @@
     position: relative;
     padding: 0 rem(30px);
 
+    @include tablet {
+      flex-direction: column;
+      text-align: center;
+    }
+
     @include phone {
       flex-direction: column;
       text-align: center;
@@ -75,6 +80,13 @@
       transform: translate(-50%, -50%);
     }
 
+    @include tablet {
+      right: 0;
+      top: rem(-50px);
+      bottom: inherit;
+      left: inherit;
+    }
+
     @include phone {
       right: 0;
       top: rem(-98px);
@@ -86,6 +98,10 @@
 &__burger,
 &__desc {
   width: rem(480px);
+
+  @include tablet {
+    width: 100%;
+  }
 
   @include phone {
     width: 100%;
@@ -106,11 +122,14 @@
 
 &__cost {
   display: flex;
-  align-items: baseline;
+  align-items: center;
+
+  @include tablet {
+    justify-content: center;
+  }
 
   @include phone {
     justify-content: center;
-    align-items: center;
   }
 }
 
