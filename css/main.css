@@ -141,6 +141,10 @@ table {
       color: #2f3234; }
     .section__title_margin-bottom {
       margin-bottom: 3.75rem; }
+    .section__title_absolute {
+      position: absolute;
+      top: 6.875rem;
+      left: 6.25rem; }
     .section__title_white {
       color: #fff; }
       @media screen and (max-width: 480px) {
