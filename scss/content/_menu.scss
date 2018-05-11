@@ -15,12 +15,17 @@
     &_active {
       width: auto;
       display: flex;
+      z-index: 100;
 
       .menu__desc {
         width: rem(540px);
 
         @include tablet {
-          width: 20rem;
+          width: calc(100% - 5rem);
+        }
+
+        @include phone {
+          width: calc(100% - 4rem);
         }
       }
 
@@ -69,6 +74,10 @@
       transform: rotate(-90deg);
       white-space: nowrap;
       width: 100%;
+    }
+
+    @include phone {
+      width: rem(64px);
     }
   }
 }

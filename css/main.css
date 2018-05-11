@@ -715,12 +715,16 @@ table {
       width: auto;
       display: -webkit-box;
       display: -ms-flexbox;
-      display: flex; }
+      display: flex;
+      z-index: 100; }
       .menu__content_active .menu__desc {
         width: 33.75rem; }
         @media screen and (max-width: 768px) {
           .menu__content_active .menu__desc {
-            width: 20rem; } }
+            width: calc(100% - 5rem); } }
+        @media screen and (max-width: 480px) {
+          .menu__content_active .menu__desc {
+            width: calc(100% - 4rem); } }
       .menu__content_active .menu__title_text {
         color: #f9b43b; }
   .menu__desc {
@@ -760,6 +764,9 @@ table {
               transform: rotate(-90deg);
       white-space: nowrap;
       width: 100%; }
+    @media screen and (max-width: 480px) {
+      .menu__title {
+        width: 4rem; } }
 
 .map {
   background: url("../img/content/map.jpg") center center/cover no-repeat;
