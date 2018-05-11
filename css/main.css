@@ -1024,6 +1024,9 @@ table {
       font-size: 0.875rem;
       font-family: 'Gagalin', Helvetica, sans-serif;
       color: #fff; }
+    @media screen and (max-width: 480px) {
+      .slider__compos {
+        top: -6.125rem; } }
   .slider__kkal {
     position: absolute;
     bottom: 0;
@@ -1047,11 +1050,14 @@ table {
     @media screen and (max-width: 480px) {
       .slider__kkal {
         right: 0;
-        top: -3.125rem;
+        top: -6.125rem;
         bottom: inherit;
         left: inherit; } }
   .slider__burger, .slider__desc {
     width: 30rem; }
+    @media screen and (max-width: 480px) {
+      .slider__burger, .slider__desc {
+        width: 100%; } }
   .slider__burger_img {
     max-width: 100%; }
   .slider__text {
@@ -1071,7 +1077,10 @@ table {
       .slider__cost {
         -webkit-box-pack: center;
             -ms-flex-pack: center;
-                justify-content: center; } }
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center; } }
   .slider__price {
     font-size: 1.875rem;
     font-family: 'Gagalin', Helvetica, sans-serif;
@@ -1079,5 +1088,10 @@ table {
     margin-right: 1.875rem; }
     .slider__price_num {
       font-size: 4.5rem; }
+    @media screen and (max-width: 480px) {
+      .slider__price {
+        white-space: nowrap; } }
+  .slider__btn {
+    padding-top: 25px; }
 
 /*# sourceMappingURL=main.css.map */
