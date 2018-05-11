@@ -997,8 +997,7 @@ table {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    position: relative;
-    padding: 0 1.875rem; }
+    position: relative; }
     @media screen and (max-width: 768px) {
       .slider__content {
         -webkit-box-orient: vertical;
