@@ -1,0 +1,43 @@
+.nav {
+  margin-right: rem(15px);
+  margin-left: auto;
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+
+    &:after {
+      @include circle(5px, $white);
+
+      content: ' ';
+      margin: 0 rem(12px);
+    }
+
+    &:last-child:after {
+      display: none;
+    }
+  }
+
+  &__item_link {
+    @include font-size(13);
+    @include line-height(20);
+
+    color: $white;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: .5s;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  @include tablet {
+    display: none;
+  }
+}

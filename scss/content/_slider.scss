@@ -9,13 +9,13 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    position: relative;
   }
 
   &__content {
-    display: flex;
+    display: none;
     align-items: center;
     position: relative;
-    // padding: 0 rem(30px);
 
     @include tablet {
       flex-direction: column;
@@ -26,6 +26,10 @@
       flex-direction: column;
       text-align: center;
     }
+
+    &_active {
+      display: flex;
+    }
   }
 
   &__compos {
@@ -34,24 +38,112 @@
     width: rem(90px);
     height: rem(90px);
     position: absolute;
-    top: rem(-50px);
+    top: 0;
     left: 0;
+    z-index: 200;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 
-  &_text {
-    @include font-size(14);
-    @include gagalin();
+    &_text {
+      @include font-size(14);
+      @include gagalin();
 
-    color: $white;
+      color: $white;
+    }
+
+    &:hover {
+      background-color: $red;
+
+      .slider__dropdown {
+        opacity: 1;
+      }
+
+      @include tablet {
+        .close {
+          display: block;
+        }
+      }
+
+      @include phone {
+        .close {
+          display: block;
+        }
+      }
+    }
+
+    &_content {
+      position: absolute;
+      left: 100%;
+      top: 0;
+      width: rem(270px);
+      z-index: 100;
+
+      .close {
+        display: none;
+        position: absolute;
+        right: 25px;
+        top: 15px;
+
+        &::before,
+        &::after {
+          content: "";
+          width: rem(20px);
+          height: rem(2px);
+          border-radius: rem(3px);
+          background: rgba(227, 80, 40, .7);
+          position: absolute;
+        }
+
+        &::before {
+          transform: rotate(45deg);
+        }
+
+        &::after {
+          transform: rotate(-45deg);
+        }
+      }
+
+      @include tablet {
+        width: calc(380px - 15%);
+      }
+
+      @include phone {
+        width: calc(300px - 15%);
+      }
+    }
   }
 
-  @include phone {
-    top: rem(-98px)
+  &__dropdown {
+    display: flex;
+    flex-direction: column;
+    background: rgba(250, 250, 250, .9);
+    border-radius: rem(4px);
+    padding: rem(20px);
+    opacity: 0;
+    transition: opacity .6s;
+
+    &_item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: rem(20px);
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    @include tablet {
+      padding-right: rem(40px);
+    }
+
+    @include phone {
+      padding-right: rem(40px);
+    }
   }
-}
 
   &__kkal {
     position: absolute;
@@ -75,82 +167,88 @@
 
     &_num {
       position: absolute;
-      top: 50%;
+      top: 55%;
       left: 50%;
       transform: translate(-50%, -50%);
     }
 
     @include tablet {
       right: 0;
-      top: rem(-50px);
+      top: 0;
       bottom: inherit;
       left: inherit;
+    }
+  }
+
+  &__burger,
+  &__desc {
+    flex: 1;
+    padding: rem(80px) 0;
+  }
+
+  &__burger {
+    @include tablet {
+      padding-bottom: 0;
     }
 
     @include phone {
-      right: 0;
-      top: rem(-98px);
-      bottom: inherit;
-      left: inherit;
+      padding-bottom: 0;
     }
   }
 
-&__burger,
-&__desc {
-  width: rem(480px);
+  &__desc {
+    @include tablet {
+      padding: 0;
+    }
 
-  @include tablet {
-    width: 100%;
+    @include phone {
+      padding: 0;
+    }
   }
 
-  @include phone {
-    width: 100%;
-  }
-}
-
-&__burger_img {
-  max-width: 100%;
-}
-
-&__text {
-  @include font-size(14);
-  @include line-height(24);
-  @include ubuntu(light);
-
-  color: $white;
-}
-
-&__cost {
-  display: flex;
-  align-items: center;
-
-  @include tablet {
-    justify-content: center;
+  &__burger_img {
+    max-width: 100%;
   }
 
-  @include phone {
-    justify-content: center;
-  }
-}
+  &__text {
+    @include font-size(14);
+    @include line-height(24);
+    @include ubuntu(light);
 
-&__price {
-  @include font-size(30);
-  @include gagalin();
-
-  color: $orange;
-  margin-right: rem(30px);
-
-  &_num {
-    @include font-size(72);
+    color: $white;
   }
 
-  @include phone {
-    white-space: nowrap;
-  }
-}
+  &__cost {
+    display: flex;
+    align-items: center;
 
-&__btn {
-  padding-top: 25px;
-}
+    @include tablet {
+      justify-content: center;
+    }
+
+    @include phone {
+      justify-content: center;
+    }
+  }
+
+  &__price {
+    @include font-size(30);
+    @include gagalin();
+
+    color: $orange;
+    margin-right: rem(30px);
+
+    &_num {
+      @include font-size(72);
+    }
+
+    @include phone {
+      white-space: nowrap;
+    }
+  }
+
+  &__btn {
+    padding-top: 25px;
+  }
 
 }

@@ -1,5 +1,7 @@
+@import 'content/team/_accordeon.scss';
+
 .team {
-  background: url("../img/bg_team.jpg") center center / cover no-repeat;
+  background: url("../img/bg/bg_team.jpg") center center / cover no-repeat;
   position: relative;
 
   &__wrapper {
@@ -23,106 +25,5 @@
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-}
-
-.accordeon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-
-  &__content {
-    @include tablet {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    }
-  }
-
-  &__name {
-    @include font-size(14);
-    @include line-height(28);
-
-    display: flex;
-    align-items: center;
-    color: $white;
-    text-transform: uppercase;
-    font-weight: 400;
-    font-family: $secondary-font;
-    margin-bottom: rem(40px);
-
-    &::before {
-      content: "";
-      display: block;
-      width: 0;
-      height: 0;
-      border: 5px solid transparent;
-      border-top: 5px solid $yellow;
-      margin-right: 10px;
-    }
-
-    @include phone {
-      @include font-size(24);
-    }
-  }
-
-  &__desc {
-    display: flex;
-    height: 0;
-    overflow: hidden;
-
-    @include tablet {
-      flex-direction: column;
-      text-align: center;
-    }
-  }
-
-  &__img {
-    width: rem(100px);
-    height: rem(100px);
-    border-radius: 50%;
-    overflow: hidden;
-    background: center center / cover;
-    margin-left: rem(20px);
-
-    @include tablet {
-      align-self: center;
-      margin-bottom: rem(20px);
-    }
-  }
-
-  &__text {
-    @include line-height(24);
-
-    font-size: 14px;
-    font-family: $main-font;
-    font-weight: 900;
-    color: $white;
-    width: rem(215px);
-    margin-left: rem(20px);
-
-    &_title {
-      margin-bottom: rem(25px);
-    }
-
-    &_paragraph {
-      font-weight: 300;
-    }
-  }
-
-  &__content_active {
-    .accordeon__name {
-      color: $yellow;
-
-      &::before {
-        transform: rotate(180deg);
-      }
-    }
-
-    .accordeon__desc {
-      height: auto;
-      margin-bottom: rem(40px);
-    }
   }
 }

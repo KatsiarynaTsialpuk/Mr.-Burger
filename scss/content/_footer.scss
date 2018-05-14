@@ -1,5 +1,7 @@
+@import 'content/footer/_socials.scss';
+
 .footer {
-  background: url("../img/bg_footer.jpg") center center / cover no-repeat;
+  background: url("../img/bg/bg_footer.jpg") center center / cover no-repeat;
 
   &__content {
     display: flex;
@@ -28,57 +30,5 @@
     @include line-height(24);
 
     font-family: $main-font;
-  }
-
-  &__list {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-  }
-
-  &__item {
-    margin-right: rem(20px);
-
-    &:last-child {
-      margin-right: 0;
-    }
-  }
-
-  &__link {
-    margin-right: rem(20px);
-
-    &:last-child {
-      margin-right: 0;
-    }
-  }
-
-  &__icons {
-    fill: $light-gray;
-    max-width: rem(20px);
-    width: 100%;
-    height: auto;
-    vertical-align: middle;
-
-    &:hover {
-      fill: $white;
-    }
-  }
-
-  &__address {
-    color: $white;
-    font-weight: 300;
-  }
-
-  &__tel {
-    color: $orange;
-    font-weight: 900;
-
-    &_icon {
-      fill: $orange;
-      max-width: rem(12px);
-      width: 100%;
-      height: auto;
-      margin-right: rem(10px);
-    }
   }
 }
