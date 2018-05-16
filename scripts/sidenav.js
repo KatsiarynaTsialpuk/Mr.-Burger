@@ -39,6 +39,3 @@ window.onscroll = function () {
         header.style.backgroundColor = 'transparent';
     }
 };
-
-//horizontal accordeon
-
