@@ -24,6 +24,14 @@
     }
   }
 
+  &__right_btns {
+    @include phone {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
   &__left {
     margin-right: rem(20px);
 
@@ -96,6 +104,7 @@
     font-family: $main-font;
     font-weight: 300;
     display: inline-flex;
+    white-space: nowrap;
   }
 
   &__input {
