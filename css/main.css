@@ -1177,7 +1177,10 @@ table {
     .slider__compos:hover {
       background-color: #e35028; }
       .slider__compos:hover .slider__dropdown {
-        opacity: 1; }
+        opacity: 1;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; }
       @media screen and (max-width: 768px) {
         .slider__compos:hover .close {
           display: block; } }
@@ -1215,9 +1218,7 @@ table {
         .slider__compos_content {
           width: calc(300px - 15%); } }
   .slider__dropdown {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: none;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;

@@ -59,6 +59,7 @@
 
       .slider__dropdown {
         opacity: 1;
+        display: flex;
       }
 
       @include tablet {
@@ -117,7 +118,7 @@
   }
 
   &__dropdown {
-    display: flex;
+    display: none;
     flex-direction: column;
     background: rgba(250, 250, 250, .9);
     border-radius: rem(4px);
