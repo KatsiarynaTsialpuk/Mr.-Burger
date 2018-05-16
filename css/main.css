@@ -350,16 +350,6 @@ table {
     opacity: 0;
     -webkit-transition: .2s;
     transition: .2s; }
-    @media screen and (max-width: 768px) {
-      .hamburger__menu {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex; } }
-    @media screen and (max-width: 480px) {
-      .hamburger__menu {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex; } }
   .hamburger__list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -409,7 +399,10 @@ table {
       display: flex; } }
 
 .hamburger__menu.activeMenu {
-  opacity: 1; }
+  opacity: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
 
 .hamburger.activeMenu .hamburger__element:nth-child(1) {
   -webkit-transform: translate(-100%, -50%) translateY(-35px);
