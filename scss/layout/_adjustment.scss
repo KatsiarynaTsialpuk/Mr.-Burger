@@ -171,6 +171,7 @@
   bottom: 40px;
   left: 50%;
   transition: .5s;
+  transform: translate(-50%, -50%);
 
   &__img_left {
     transform: rotate(90deg);

@@ -242,7 +242,9 @@ table {
   bottom: 40px;
   left: 50%;
   -webkit-transition: .5s;
-  transition: .5s; }
+  transition: .5s;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%); }
   .arrow__img_left {
     -webkit-transform: rotate(90deg);
             transform: rotate(90deg); }
