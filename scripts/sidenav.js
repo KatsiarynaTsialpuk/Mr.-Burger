@@ -5,20 +5,12 @@ const activeMenu = document.querySelector('.hamburger__menu');
 hamburger.addEventListener('click', function (e) {
     e.preventDefault();
 
-    if (activeMenu.className === 'hamburger__menu') {
-        activeMenu.className += ' activeMenu';
+    if (activeMenu.classList.contains('hamburger__menu')) {
+        activeMenu.classList.toggle('activeMenu');
     }
 
-    else {
-        activeMenu.className = 'hamburger__menu';
-    }
-
-    if (hamburger.className === 'hamburger') {
-        hamburger.className += ' activeMenu';
-    }
-
-    else {
-        hamburger.className = 'hamburger';
+    if (hamburger.classList.contains('hamburger')) {
+        hamburger.classList.toggle('activeMenu');
     }
 });
 
