@@ -1217,6 +1217,9 @@ table {
       @media screen and (max-width: 480px) {
         .slider__compos_content {
           width: calc(300px - 15%); } }
+    @media screen and (max-width: 480px) {
+      .slider__compos {
+        left: -1.875rem; } }
   .slider__dropdown {
     display: none;
     -webkit-box-orient: vertical;
@@ -1274,6 +1277,9 @@ table {
         top: 0;
         bottom: inherit;
         left: inherit; } }
+    @media screen and (max-width: 480px) {
+      .slider__kkal {
+        right: -1.875rem; } }
   .slider__burger, .slider__desc {
     -webkit-box-flex: 1;
         -ms-flex: 1;

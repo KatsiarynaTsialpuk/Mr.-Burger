@@ -115,6 +115,10 @@
         width: calc(300px - 15%);
       }
     }
+
+    @include phone {
+      left: rem(-30px);
+    }
   }
 
   &__dropdown {
@@ -178,6 +182,10 @@
       top: 0;
       bottom: inherit;
       left: inherit;
+    }
+
+    @include phone {
+      right: rem(-30px);
     }
   }
 
