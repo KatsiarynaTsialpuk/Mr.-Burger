@@ -1283,20 +1283,15 @@ table {
   .slider__burger, .slider__desc {
     -webkit-box-flex: 1;
         -ms-flex: 1;
-            flex: 1;
-    padding: 5rem 0; }
-  @media screen and (max-width: 768px) {
-    .slider__burger {
-      padding-bottom: 0; } }
-  @media screen and (max-width: 480px) {
-    .slider__burger {
-      padding-bottom: 0; } }
-  @media screen and (max-width: 768px) {
-    .slider__desc {
-      padding: 0; } }
-  @media screen and (max-width: 480px) {
-    .slider__desc {
-      padding: 0; } }
+            flex: 1; }
+  .slider__burger {
+    padding: 6.25rem 0; }
+    @media screen and (max-width: 768px) {
+      .slider__burger {
+        padding-bottom: 0; } }
+    @media screen and (max-width: 480px) {
+      .slider__burger {
+        padding-bottom: 0; } }
   .slider__burger_img {
     max-width: 100%; }
   .slider__text {

@@ -192,26 +192,17 @@
   &__burger,
   &__desc {
     flex: 1;
-    padding: rem(80px) 0;
   }
 
   &__burger {
+    padding: rem(100px) 0;
+
     @include tablet {
       padding-bottom: 0;
     }
 
     @include phone {
       padding-bottom: 0;
-    }
-  }
-
-  &__desc {
-    @include tablet {
-      padding: 0;
-    }
-
-    @include phone {
-      padding: 0;
     }
   }
 
