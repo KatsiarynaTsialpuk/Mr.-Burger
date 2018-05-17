@@ -32,6 +32,7 @@
       border: 5px solid transparent;
       border-top: 5px solid $yellow;
       margin-right: 10px;
+      transition: 1s;
     }
 
     @include phone {
@@ -39,10 +40,14 @@
     }
   }
 
-  &__desc {
-    display: flex;
+  &__desc-wrap {
     height: 0;
     overflow: hidden;
+    transition: 1s;
+  }
+
+  &__desc {
+    display: flex;
 
     @include tablet {
       flex-direction: column;
@@ -92,8 +97,8 @@
       }
     }
 
-    .accordeon__desc {
-      height: auto;
+    .accordeon__desc-wrap {
+      height: 100px;
       margin-bottom: rem(40px);
     }
   }
