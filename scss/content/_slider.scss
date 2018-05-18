@@ -12,10 +12,23 @@
     position: relative;
   }
 
+  &__inner {
+    display: flex;
+    width: rem(880px);
+    overflow: hidden;
+  }
+
+  &__list {
+    display: flex;
+  }
+
   &__content {
-    display: none;
+    display: flex;
     align-items: center;
     position: relative;
+    justify-content: center;
+    box-sizing: border-box;
+    width: rem(880px);
 
     @include tablet {
       flex-direction: column;
@@ -152,7 +165,7 @@
 
   &__kkal {
     position: absolute;
-    bottom: 0;
+    //bottom: 0;
     left: 0;
 
     &_num,

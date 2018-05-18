@@ -724,16 +724,21 @@ table {
       height: 0;
       border: 5px solid transparent;
       border-top: 5px solid #f9b43b;
-      margin-right: 10px; }
+      margin-right: 10px;
+      -webkit-transition: 1s;
+      transition: 1s; }
     @media screen and (max-width: 480px) {
       .accordeon__name {
         font-size: 1.5rem; } }
+  .accordeon__desc-wrap {
+    height: 0;
+    overflow: hidden;
+    -webkit-transition: 1s;
+    transition: 1s; }
   .accordeon__desc {
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex;
-    height: 0;
-    overflow: hidden; }
+    display: flex; }
     @media screen and (max-width: 768px) {
       .accordeon__desc {
         -webkit-box-orient: vertical;
@@ -770,8 +775,8 @@ table {
     .accordeon__content_active .accordeon__name::before {
       -webkit-transform: rotate(180deg);
               transform: rotate(180deg); }
-  .accordeon__content_active .accordeon__desc {
-    height: auto;
+  .accordeon__content_active .accordeon__desc-wrap {
+    height: 100px;
     margin-bottom: 2.5rem; }
 
 .team {
@@ -1123,12 +1128,30 @@ table {
         -ms-flex-align: center;
             align-items: center;
     position: relative; }
+  .slider__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 55rem;
+    overflow: hidden; }
+  .slider__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
   .slider__content {
-    display: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    position: relative; }
+    position: relative;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 55rem; }
     @media screen and (max-width: 768px) {
       .slider__content {
         -webkit-box-orient: vertical;
@@ -1253,7 +1276,6 @@ table {
         padding-right: 2.5rem; } }
   .slider__kkal {
     position: absolute;
-    bottom: 0;
     left: 0; }
     .slider__kkal_num, .slider__kkal_desc {
       font-size: 0.875rem;
