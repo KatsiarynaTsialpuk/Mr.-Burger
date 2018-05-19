@@ -28,7 +28,7 @@
             }
         }
     });
-}) ();
+})();
 
 
 // const teamAccordeon = document.querySelector('.accordeon');
@@ -42,3 +42,31 @@
 //     )
 //     })
 // }
+
+//vertical accordeon
+
+(function () {
+    const menuAccordeon = document.querySelector('.menu__accordeon');
+
+    menuAccordeon.addEventListener('click', function (event) {
+        if (event.target.classList.contains('menu__title')) {
+            event.preventDefault();
+
+            const eventThis = event.target;
+            const menuItem = eventThis.parentNode;
+            const menuList = menuItem.parentNode;
+            const items = menuList.children;
+            const content = eventThis.nextElementSibling;
+
+            if (!menuItem.classList.contains('menu__content_active')) {
+                for (let i = 0; i < items.length; i++) {
+                    items[i].classList.remove('menu__content_active');
+                }
+
+                menuItem.classList.add('menu__content_active');
+            } else {
+                menuItem.classList.remove('menu__content_active');
+            }
+        }
+    });
+})();

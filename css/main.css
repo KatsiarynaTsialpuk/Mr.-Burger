@@ -776,7 +776,7 @@ table {
       -webkit-transform: rotate(180deg);
               transform: rotate(180deg); }
   .accordeon__content_active .accordeon__desc-wrap {
-    height: 100px;
+    height: auto;
     margin-bottom: 2.5rem; }
 
 .team {

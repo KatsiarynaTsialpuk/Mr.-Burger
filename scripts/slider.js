@@ -14,6 +14,9 @@ right.addEventListener('click', function (e) {
 
     if (curentRight < 3520) {
         items.style.right = curentRight + 880 + 'px';
+    }
+
+    if (!listItem.classList.contains('slider__content_active')) {
         listItem.classList.add('slider__content_active');
     }
 });
