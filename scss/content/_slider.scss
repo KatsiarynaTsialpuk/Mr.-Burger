@@ -7,24 +7,26 @@
 
   &__wrapper {
     display: flex;
-    flex-direction: row;
+    //flex-direction: row;
     align-items: center;
     position: relative;
   }
 
   &__inner {
-    display: flex;
+    //display: flex;
     width: rem(880px);
     overflow: hidden;
   }
 
   &__list {
     display: flex;
+    align-items: center;
+    will-change: right;
     transition: 1s;
   }
 
   &__content {
-    display: flex;
+    display: none;
     align-items: center;
     position: relative;
     justify-content: center;
@@ -166,7 +168,6 @@
 
   &__kkal {
     position: absolute;
-    //bottom: 0;
     left: 0;
 
     &_num,
@@ -206,6 +207,10 @@
   &__burger,
   &__desc {
     flex: 1;
+
+    @include phone {
+      width: 30rem;
+    }
   }
 
   &__burger {
