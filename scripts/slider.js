@@ -29,7 +29,7 @@ left.addEventListener('click', function(e) {
     if (curentRight > 0) {
         items.style.right = curentRight - 880 + 'px';
     }
-})
+});
 
 // (function() {
 //     const list = document.querySelector('.slider__list');
