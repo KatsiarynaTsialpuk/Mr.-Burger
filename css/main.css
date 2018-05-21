@@ -1138,7 +1138,9 @@ table {
     -webkit-transition: 1s;
     transition: 1s; }
   .slider__content {
-    display: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -1163,10 +1165,6 @@ table {
             -ms-flex-direction: column;
                 flex-direction: column;
         text-align: center; } }
-    .slider__content_active {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex; }
   .slider__compos {
     background: #f08c33;
     border-radius: 0.25rem;

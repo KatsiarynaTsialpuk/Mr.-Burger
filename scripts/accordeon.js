@@ -30,19 +30,6 @@
     });
 })();
 
-
-// const teamAccordeon = document.querySelector('.accordeon');
-// const accordeonName = document.querySelector('.accordeon__name');
-//
-// for (i = 0; i < accordeonName.length; i++) {
-//     accordeonName.addEventListener('click', function() {
-//         if (!(teamAccordeon.classList.contains('accordeon__content_active')) {
-//
-//         }
-//     )
-//     })
-// }
-
 //vertical accordeon
 
 (function () {
