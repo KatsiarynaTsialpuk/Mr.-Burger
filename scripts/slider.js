@@ -16,9 +16,6 @@ right.addEventListener('click', function (e) {
         items.style.right = curentRight + 880 + 'px';
     }
 
-    if (!listItem.classList.contains('slider__content_active')) {
-        listItem.classList.add('slider__content_active');
-    }
 });
 
 left.addEventListener('click', function(e) {
