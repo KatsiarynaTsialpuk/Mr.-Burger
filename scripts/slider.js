@@ -33,3 +33,12 @@ left.addEventListener('click', function(e) {
         items.style.right = curentRight - 880 + 'px';
     }
 })
+
+// (function() {
+//     const list = document.querySelector('.slider__list');
+//     const sliderWidth = document.querySelector('.slider__inner').clientWidth;
+//     const itemsCount = list.children.length;
+//     const listWidth = sliderWidth * itemsCount;
+    
+//     list.style.width = listWidth + 'px';
+//     })();
