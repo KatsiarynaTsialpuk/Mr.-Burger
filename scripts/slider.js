@@ -11,17 +11,17 @@
 
     list.style.width = listWidth + 'px';
 
-    sliderWrapper.addEventListener('click', function (event) {
+    sliderWrapper.addEventListener('click', function (e) {
         activeSlide = list.querySelector('.slider__content_active');
 
-        if (event.target.classList.contains('right-arrow')) {
-            event.preventDefault();
+        if (e.target.classList.contains('arrow__link_right')) {
+            e.preventDefault();
 
             if (activeSlide.nextElementSibling) {
                 slideTo('next');
             }
-        } else if (event.target.classList.contains('left-arrow')) {
-            event.preventDefault();
+        } else if (e.target.classList.contains('arrow__link_left')) {
+            e.preventDefault();
 
             if (activeSlide.previousElementSibling) slideTo('prev');
         }

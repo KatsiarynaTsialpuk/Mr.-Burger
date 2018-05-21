@@ -36,7 +36,7 @@
     const menuAccordeon = document.querySelector('.menu__accordeon');
 
     menuAccordeon.addEventListener('click', function (event) {
-        if (event.target.classList.contains('menu__title')) {
+        if (event.target.classList.contains('menu__title') || event.target.classList.contains('menu__title_text')) {
             event.preventDefault();
 
             const eventThis = event.target;

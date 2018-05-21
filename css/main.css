@@ -104,9 +104,8 @@ table {
 
 .wrapper {
   width: 100%;
-  min-height: 100%;
-  position: relative;
-  overflow: hidden; }
+  height: 100%;
+  position: relative; }
 
 .container {
   width: 95%;
@@ -245,15 +244,21 @@ table {
   transition: .5s;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%); }
-  .arrow__img_left {
-    -webkit-transform: rotate(90deg);
-            transform: rotate(90deg); }
-  .arrow__img_right {
-    -webkit-transform: rotate(-90deg);
-            transform: rotate(-90deg); }
+  .arrow__link {
+    background: url("../img/icons/arrow.png") center center/cover no-repeat;
+    display: block;
+    width: 1.875rem;
+    height: 0.9375rem; }
+    .arrow__link_left {
+      -webkit-transform: rotate(90deg);
+              transform: rotate(90deg); }
+    .arrow__link_right {
+      -webkit-transform: rotate(-90deg);
+              transform: rotate(-90deg); }
 
 .footer {
-  position: relative;
+  position: absolute;
+  bottom: 0;
   width: 100%; }
 
 .logo {
@@ -1172,7 +1177,6 @@ table {
     height: 5.625rem;
     position: absolute;
     top: 0;
-    left: 0;
     z-index: 200;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1235,9 +1239,6 @@ table {
       @media screen and (max-width: 480px) {
         .slider__compos_content {
           width: calc(300px - 15%); } }
-    @media screen and (max-width: 480px) {
-      .slider__compos {
-        left: -1.875rem; } }
   .slider__dropdown {
     display: none;
     -webkit-box-orient: vertical;
