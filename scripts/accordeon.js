@@ -39,7 +39,7 @@
         if (event.target.classList.contains('menu__title') || event.target.classList.contains('menu__title_text')) {
             event.preventDefault();
 
-            const eventThis = event.target.closest('.menu__title_text') || event.target;
+            const eventThis = event.target.closest('.menu__title') || event.target;
             console.log(eventThis);
             const menuItem = eventThis.parentNode;
             const menuList = menuItem.parentNode;

@@ -13,20 +13,16 @@
     justify-content: flex-end;
 
     &_active {
-      width: auto;
       display: flex;
       z-index: 100;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
 
       .menu__desc {
         width: rem(540px);
-
-        @include tablet {
-          width: calc(100% - 5rem);
-        }
-
-        @include phone {
-          width: calc(100% - 4rem);
-        }
       }
 
       .menu__title_text {

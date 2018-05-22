@@ -907,19 +907,17 @@ table {
         -ms-flex-pack: end;
             justify-content: flex-end; }
     .menu__content_active {
-      width: auto;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      z-index: 100; }
+      z-index: 100;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%; }
       .menu__content_active .menu__desc {
         width: 33.75rem; }
-        @media screen and (max-width: 768px) {
-          .menu__content_active .menu__desc {
-            width: calc(100% - 5rem); } }
-        @media screen and (max-width: 480px) {
-          .menu__content_active .menu__desc {
-            width: calc(100% - 4rem); } }
       .menu__content_active .menu__title_text {
         color: #f9b43b; }
   .menu__desc {
