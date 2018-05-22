@@ -10,6 +10,7 @@
     //flex-direction: row;
     align-items: center;
     position: relative;
+    width: 100%;
   }
 
   &__inner {
@@ -31,7 +32,7 @@
     position: relative;
     justify-content: center;
     box-sizing: border-box;
-    width: rem(880px);
+    flex: 1;
 
     @include tablet {
       flex-direction: column;
@@ -51,7 +52,7 @@
     height: rem(90px);
     position: absolute;
     top: 0;
-    //left: 0;
+    left: 1px;
     z-index: 200;
     display: flex;
     flex-direction: column;
@@ -124,13 +125,9 @@
       }
 
       @include phone {
-        width: calc(300px - 15%);
+        width: calc(270px - 35%);
       }
     }
-    //
-    //@include phone {
-    //  left: rem(-30px);
-    //}
   }
 
   &__dropdown {
@@ -194,19 +191,11 @@
       bottom: inherit;
       left: inherit;
     }
-
-    @include phone {
-      right: rem(-30px);
-    }
   }
 
   &__burger,
   &__desc {
     flex: 1;
-
-    @include phone {
-      width: 30rem;
-    }
   }
 
   &__burger {
@@ -221,8 +210,20 @@
     }
   }
 
-  &__burger_img {
-    max-width: 100%;
+  &__img {
+    width: rem(400px);
+
+    &_big {
+      max-width: 100%;
+
+      @include phone {
+        max-width: 80%;
+      }
+    }
+
+    @include phone {
+      width: rem(320px);
+    }
   }
 
   &__text {
@@ -243,6 +244,7 @@
 
     @include phone {
       justify-content: center;
+      flex-direction: column;
     }
   }
 
@@ -264,6 +266,10 @@
 
   &__btn {
     padding-top: 25px;
+
+    @include phone {
+      padding-top: 0;
+    }
   }
 
 }

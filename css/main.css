@@ -151,6 +151,9 @@ table {
           z-index: -1; } }
     .section__title_center {
       text-align: center; }
+    @media screen and (max-width: 480px) {
+      .section__title {
+        font-size: 3.5rem; } }
 
 .order-btn {
   font-size: 0.8125rem;
@@ -260,6 +263,71 @@ table {
   position: absolute;
   bottom: 0;
   width: 100%; }
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(47, 50, 52, 0.92);
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 10000; }
+  .popup__active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .popup__container {
+    position: relative; }
+  .popup__close {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    right: 30px;
+    top: 20px; }
+    .popup__close::before, .popup__close::after {
+      content: "";
+      width: 1.25rem;
+      height: 0.125rem;
+      border-radius: 0.1875rem;
+      background: rgba(227, 80, 40, 0.7);
+      position: absolute; }
+    .popup__close::before {
+      -webkit-transform: rotate(45deg);
+              transform: rotate(45deg); }
+    .popup__close::after {
+      -webkit-transform: rotate(-45deg);
+              transform: rotate(-45deg); }
+  .popup__content {
+    width: 28.75rem;
+    background: #fff;
+    border-radius: 0.25rem;
+    padding: 1.25rem; }
+    @media screen and (max-width: 768px) {
+      .popup__content {
+        padding-right: 2.5rem; } }
+    @media screen and (max-width: 480px) {
+      .popup__content {
+        padding-right: 2.5rem; } }
+  .popup__title {
+    font-size: 0.875rem;
+    line-height: 1.75rem;
+    font-family: 'Gagalin', Helvetica, sans-serif;
+    color: #2f3234;
+    margin-bottom: 1.25rem; }
+  .popup__text {
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    font-family: 'Ubuntu', Helvetica, sans-serif;
+    font-weight: 300;
+    color: #2f3234; }
 
 .logo {
   z-index: 1000; }
@@ -492,7 +560,6 @@ table {
                 flex-grow: 0; } }
     @media screen and (max-width: 480px) {
       .intro__content {
-        padding: 0 10%;
         -webkit-box-flex: 0;
             -ms-flex-positive: 0;
                 flex-grow: 0; } }
@@ -526,6 +593,9 @@ table {
       font-family: "Lifehack", Arial, serif;
       font-weight: 500;
       line-height: 1; }
+      @media screen and (max-width: 480px) {
+        .intro__desc_text {
+          font-size: 3.0625rem; } }
     @media screen and (max-width: 768px) {
       .intro__desc {
         text-align: center; } }
@@ -721,7 +791,7 @@ table {
     text-transform: uppercase;
     font-weight: 400;
     font-family: "Gagalin", Arial, sans-serif;
-    margin-bottom: 2.5rem; }
+    margin: 1.25rem 0; }
     .accordeon__name::before {
       content: "";
       display: block;
@@ -780,9 +850,6 @@ table {
     .accordeon__content_active .accordeon__name::before {
       -webkit-transform: rotate(180deg);
               transform: rotate(180deg); }
-  .accordeon__content_active .accordeon__desc-wrap {
-    height: auto;
-    margin-bottom: 2.5rem; }
 
 .team {
   background: url("../img/bg/bg_team.jpg") center center/cover no-repeat;
@@ -1128,7 +1195,8 @@ table {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    position: relative; }
+    position: relative;
+    width: 100%; }
   .slider__inner {
     width: 55rem;
     overflow: hidden; }
@@ -1155,7 +1223,9 @@ table {
             justify-content: center;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    width: 55rem; }
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1; }
     @media screen and (max-width: 768px) {
       .slider__content {
         -webkit-box-orient: vertical;
@@ -1177,6 +1247,7 @@ table {
     height: 5.625rem;
     position: absolute;
     top: 0;
+    left: 1px;
     z-index: 200;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1238,7 +1309,7 @@ table {
           width: calc(380px - 15%); } }
       @media screen and (max-width: 480px) {
         .slider__compos_content {
-          width: calc(300px - 15%); } }
+          width: calc(270px - 35%); } }
   .slider__dropdown {
     display: none;
     -webkit-box-orient: vertical;
@@ -1295,16 +1366,10 @@ table {
         top: 0;
         bottom: inherit;
         left: inherit; } }
-    @media screen and (max-width: 480px) {
-      .slider__kkal {
-        right: -1.875rem; } }
   .slider__burger, .slider__desc {
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1; }
-    @media screen and (max-width: 480px) {
-      .slider__burger, .slider__desc {
-        width: 30rem; } }
   .slider__burger {
     padding: 6.25rem 0; }
     @media screen and (max-width: 768px) {
@@ -1313,8 +1378,16 @@ table {
     @media screen and (max-width: 480px) {
       .slider__burger {
         padding-bottom: 0; } }
-  .slider__burger_img {
-    max-width: 100%; }
+  .slider__img {
+    width: 25rem; }
+    .slider__img_big {
+      max-width: 100%; }
+      @media screen and (max-width: 480px) {
+        .slider__img_big {
+          max-width: 80%; } }
+    @media screen and (max-width: 480px) {
+      .slider__img {
+        width: 20rem; } }
   .slider__text {
     font-size: 0.875rem;
     line-height: 1.5rem;
@@ -1337,7 +1410,11 @@ table {
       .slider__cost {
         -webkit-box-pack: center;
             -ms-flex-pack: center;
-                justify-content: center; } }
+                justify-content: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column; } }
   .slider__price {
     font-size: 1.875rem;
     font-family: 'Gagalin', Helvetica, sans-serif;
@@ -1350,5 +1427,8 @@ table {
         white-space: nowrap; } }
   .slider__btn {
     padding-top: 25px; }
+    @media screen and (max-width: 480px) {
+      .slider__btn {
+        padding-top: 0; } }
 
 /*# sourceMappingURL=main.css.map */

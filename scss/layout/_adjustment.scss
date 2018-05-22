@@ -54,6 +54,10 @@
     &_center {
       text-align: center;
     }
+
+    @include phone {
+      @include font-size(56);
+    }
   }
 }
 
@@ -179,7 +183,6 @@
     width: rem(30px);
     height: rem(15px);
 
-
     &_left {
       transform: rotate(90deg);
     }
@@ -195,4 +198,83 @@
   position: absolute;
   bottom: 0;
   width: 100%;
+}
+
+//popup
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(47, 50, 52, .92);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+
+  &__active {
+    display: flex;
+  }
+
+  &__container {
+    position: relative;
+  }
+
+  &__close {
+    display: flex;
+    position: absolute;
+    right: 30px;
+    top: 20px;
+
+    &::before,
+    &::after {
+      content: "";
+      width: rem(20px);
+      height: rem(2px);
+      border-radius: rem(3px);
+      background: rgba(227, 80, 40, .7);
+      position: absolute;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  &__content {
+    width: rem(460px);
+    background: $white;
+    border-radius: rem(4px);
+    padding: rem(20px);
+
+    @include tablet {
+      padding-right: rem(40px);
+    }
+
+    @include phone {
+      padding-right: rem(40px);
+    }
+  }
+
+  &__title {
+    @include font-size(14);
+    @include line-height(28);
+    @include gagalin();
+
+    color: $gray;
+    margin-bottom: rem(20px);
+  }
+
+  &__text {
+    @include font-size(14);
+    @include line-height(24);
+    @include ubuntu(light);
+
+    color: $gray;
+  }
 }

@@ -22,7 +22,7 @@
     text-transform: uppercase;
     font-weight: 400;
     font-family: $secondary-font;
-    margin-bottom: rem(40px);
+    margin: rem(20px) 0;
 
     &::before {
       content: "";
@@ -95,11 +95,6 @@
       &::before {
         transform: rotate(180deg);
       }
-    }
-
-    .accordeon__desc-wrap {
-      height: auto;
-      margin-bottom: rem(40px);
     }
   }
 }

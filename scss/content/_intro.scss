@@ -47,7 +47,7 @@
     }
 
     @include phone {
-      padding: 0 10%;
+      //padding: 0 10%;
       flex-grow: 0;
     }
   }
@@ -81,6 +81,10 @@
       font-family: $head-font;
       font-weight: 500;
       line-height: 1;
+
+      @include phone {
+        @include font-size(49);
+      }
     }
 
     @include tablet {
