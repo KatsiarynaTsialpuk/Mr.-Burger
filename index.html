@@ -13,7 +13,7 @@
 <body>
 <div class="wrapper">
     <div class="maincontent">
-        <section class="section intro">
+        <section class="section intro active">
             <div class="container intro__container">
                 <header class="intro__header">
                     <div class="logo">
@@ -24,22 +24,22 @@
                     <nav class="nav">
                         <ul class="nav__list">
                             <li class="nav__item">
-                                <a href="#about" class="nav__item_link">О нас</a>
+                                <a href="#about" data-scroll-to="1" class="nav__item_link">О нас</a>
                             </li>
                             <li class="nav__item">
-                                <a href="#" class="nav__item_link">Бургеры</a>
+                                <a href="#" data-scroll-to="2" class="nav__item_link">Бургеры</a>
                             </li>
                             <li class="nav__item">
-                                <a href="#team" class="nav__item_link">Команда</a>
+                                <a href="#team" data-scroll-to="3" class="nav__item_link">Команда</a>
                             </li>
                             <li class="nav__item">
-                                <a href="#menu" class="nav__item_link">Меню</a>
+                                <a href="#menu" data-scroll-to="4" class="nav__item_link">Меню</a>
                             </li>
                             <li class="nav__item">
-                                <a href="#reviews" class="nav__item_link">Отзывы</a>
+                                <a href="#reviews" data-scroll-to="5" class="nav__item_link">Отзывы</a>
                             </li>
                             <li class="nav__item">
-                                <a href="#" class="nav__item_link">Контакты</a>
+                                <a href="#" data-scroll-to="6" class="nav__item_link">Контакты</a>
                             </li>
                         </ul>
                     </nav>
@@ -1085,28 +1085,28 @@
     <div class="pagination__controls">
         <ul class="pagination__list">
             <li class="pagination__item pagination__item_active">
-                <a href="#about" class="pagination__link"></a>
+                <a href="#" data-scroll-to="0" class="pagination__link"></a>
             </li>
             <li class="pagination__item">
-                <a href="#" class="pagination__link"></a>
+                <a href="#" data-scroll-to="1" class="pagination__link"></a>
             </li>
             <li class="pagination__item">
-                <a href="#team" class="pagination__link"></a>
+                <a href="#" data-scroll-to="2" class="pagination__link"></a>
             </li>
             <li class="pagination__item">
-                <a href="#menu" class="pagination__link"></a>
+                <a href="#" data-scroll-to="3" class="pagination__link"></a>
             </li>
             <li class="pagination__item">
-                <a href="#" class="pagination__link"></a>
+                <a href="#" data-scroll-to="4" class="pagination__link"></a>
             </li>
             <li class="pagination__item">
-                <a href="#" class="pagination__link"></a>
+                <a href="#" data-scroll-to="5" class="pagination__link"></a>
             </li>
             <li class="pagination__item">
-                <a href="#reviews" class="pagination__link"></a>
+                <a href="#" data-scroll-to="6" class="pagination__link"></a>
             </li>
             <li class="pagination__item">
-                <a href="#" class="pagination__link"></a>
+                <a href="#" data-scroll-to="7" class="pagination__link"></a>
             </li>
         </ul>
     </div>
@@ -1122,11 +1122,13 @@
     </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.1/mobile-detect.min.js"></script>
 <script src="scripts/sidenav.js"></script>
 <script src="scripts/accordeon.js"></script>
 <script src="scripts/slider.js"></script>
 <script src="scripts/popup.js"></script>
-<!--<script src="scripts/onepagescroll.js"></script>-->
+<script src="scripts/onepagescroll.js"></script>
 </body>
 
 </html>

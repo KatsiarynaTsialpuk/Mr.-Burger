@@ -1,30 +1,97 @@
-(function () {
-    const pageScroll = document.querySelector('.maincontent');
-    let topCurrent = 0;
-    const sectionCount = pageScroll.querySelectorAll('section').length;
-    const maxTop = 0;
-    const minTop = (-1) * (sectionCount - 1) * 100;
-    const step = 100;
+const sections = $('.section');
+const display = $('.maincontent');
+let inScroll = false;
+const mobileDetect = new MobileDetect(window.navigator.userAgent);
+const isMobile = mobileDetect.mobile();
+const setActiveMenuItem = itemEq => {
+    $('.pagination__item')
+        .eq(itemEq)
+        .addClass('pagination__item_active')
+        .siblings()
+        .removeClass('pagination__item_active');
+};
 
-    pageScroll.addEventListener('wheel', function (e) {
+const performTransition = sectionEq => {
+    const position = `${-sectionEq * 100}%`;
 
-        e.preventDefault();
+    if (inScroll) return;
 
-        let delta = e.wheelDeltaY;
+    inScroll = true;
+    sections
+        .eq(sectionEq)
+        .addClass('active')
+        .siblings()
+        .removeClass('active');
 
-        if (delta > 0) {
-            if (topCurrent < maxTop) {
-                topCurrent += step;
 
-                pageScroll.style.top = topCurrent + '%';
-            }
-        }
-        else if (topCurrent > minTop) {
-            topCurrent -= step;
-
-            pageScroll.style.top = topCurrent + '%';
-        }
-
+    display.css({
+        transform: `translateY(${position})`,
+        '-webkit-transform': `translateY(${position})`
     });
 
-})();
+    const transitionDuration = parseInt(display.css('transition-duration')) * 1000;
+
+    setTimeout(() => {
+        inScroll = false;
+        setActiveMenuItem(sectionEq);
+    }, transitionDuration + 300); //за 300мс проходит инерция мышки
+};
+
+const scrollToSection = direction => {
+    const activeSection = sections.filter('.active');
+    const nextSection = activeSection.next();
+    const prevSection = activeSection.prev();
+
+    if (direction === 'up' && prevSection.length) {
+        performTransition(prevSection.index())
+    }
+
+    if (direction === 'down' && nextSection.length) {
+        performTransition(nextSection.index())
+    }
+};
+
+
+$(document).on({
+    wheel: e => {
+        const deltaY = e.originalEvent.deltaY;
+        if (deltaY > 0) {
+            scrollToSection('down');
+        }
+
+        if (deltaY < 0) {
+            scrollToSection('up');
+        }
+    },
+    keydown: e => {
+        switch (e.keyCode) {
+            case 40:
+                scrollToSection('down');
+                break;
+            case 38:
+                scrollToSection('up');
+                break;
+        }
+    },
+    touchmove: e => {
+        e.preventDefault();
+    }
+});
+
+//keudown
+$('[data-scroll-to]').on('click', e => {
+    e.preventDefault();
+
+    const target = parseInt($(e.currentTarget).attr('data-scroll-to'));
+    performTransition(target);
+});
+
+//mobile
+if (isMobile) {
+    $(document).swipe({
+        swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
+            const swipeDirection = direction === 'down' ? 'up' : 'down';
+            scrollToSection(swipeDirection);
+        }
+    });
+}

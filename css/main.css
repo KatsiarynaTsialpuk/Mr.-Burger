@@ -105,7 +105,15 @@ table {
 .wrapper {
   width: 100%;
   height: 100%;
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
+
+.maincontent {
+  height: 100%;
+  min-height: 650px;
+  -webkit-transition: 1s;
+  transition: 1s;
+  will-change: transform; }
 
 .container {
   width: 95%;
@@ -127,7 +135,7 @@ table {
   position: relative; }
 
 .section {
-  height: 100vh;
+  height: 100%;
   min-height: 40.625rem; }
   .section__title {
     font-size: 4.5rem;
