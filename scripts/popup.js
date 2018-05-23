@@ -15,13 +15,15 @@
             popupTitle.innerHTML = title;
             const popup = document.querySelector('.popup');
             popup.classList.add('popup__active');
-
-        } else if (event.target.classList.contains('popup__close')) {
-            event.preventDefault();
-
-            const popup = document.querySelector('.popup');
-            popup.classList.remove('popup__active');
         }
 
+        const closePopup = document.querySelector('.popup__close');
+        const popup = document.querySelector('.popup');
+        closePopup.addEventListener('click', function (e) {
+            e.preventDefault();
+            if (popup.classList.contains('popup__active')) {
+                popup.classList.remove('popup__active');
+            }
+        })
     });
 })();

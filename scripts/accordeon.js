@@ -40,7 +40,6 @@
             event.preventDefault();
 
             const eventThis = event.target.closest('.menu__title') || event.target;
-            console.log(eventThis);
             const menuItem = eventThis.parentNode;
             const menuList = menuItem.parentNode;
             const items = menuList.children;
