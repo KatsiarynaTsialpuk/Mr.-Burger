@@ -78,6 +78,12 @@ $(document).on({
     }
 });
 
+//arrow-down
+$('.arrow__link').on('click', e => {
+    e.preventDefault;
+    scrollToSection('down');
+});
+
 //keudown
 $('[data-scroll-to]').on('click', e => {
     e.preventDefault();
