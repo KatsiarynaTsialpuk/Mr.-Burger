@@ -19,6 +19,21 @@
     overflow: hidden;
   }
 
+  &__link {
+    background: url("../img/icons/arrow.png") center center / cover no-repeat;
+    display: block;
+    width: rem(30px);
+    height: rem(15px);
+
+    &_left {
+      transform: rotate(90deg);
+    }
+
+    &_right {
+      transform: rotate(-90deg);
+    }
+  }
+
   &__list {
     display: flex;
     align-items: center;

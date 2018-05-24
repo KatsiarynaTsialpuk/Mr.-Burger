@@ -14,13 +14,13 @@
     sliderWrapper.addEventListener('click', function (e) {
         activeSlide = list.querySelector('.slider__content_active');
 
-        if (e.target.classList.contains('arrow__link_right')) {
+        if (e.target.classList.contains('slider__link_right')) {
             e.preventDefault();
 
             if (activeSlide.nextElementSibling) {
                 slideTo('next');
             }
-        } else if (e.target.classList.contains('arrow__link_left')) {
+        } else if (e.target.classList.contains('slider__link_left')) {
             e.preventDefault();
 
             if (activeSlide.previousElementSibling) slideTo('prev');
