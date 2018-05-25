@@ -270,3 +270,54 @@
     color: $gray;
   }
 }
+
+//modal
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(47, 50, 52, .92);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+
+  &__active {
+    display: flex;
+  }
+
+  &__container {
+    position: relative;
+  }
+
+  &__content {
+    width: rem(270px);
+    background: $white;
+    border-radius: rem(4px);
+    padding: rem(20px);
+    text-align: center;
+
+    @include tablet {
+      padding-right: rem(40px);
+    }
+
+    @include phone {
+      padding-right: rem(40px);
+    }
+  }
+
+  &__btn {
+    margin: rem(20px) auto 0;
+  }
+
+  &__text {
+    @include font-size(14);
+    @include line-height(24);
+    @include ubuntu(light);
+
+    color: $gray;
+  }
+}

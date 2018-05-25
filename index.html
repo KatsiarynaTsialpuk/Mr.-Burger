@@ -44,7 +44,7 @@
                         </ul>
                     </nav>
                     <div class="btn">
-                        <a href="#" class="order-btn">Заказать</a>
+                        <a href="#" data-scroll-to="6" class="order-btn">Заказать</a>
                     </div>
                     <a href="#" class="hamburger" id="hamburger">
                         <span class="hamburger__element"></span>
@@ -253,7 +253,7 @@
                                             рублей
                                         </div>
                                         <div class="slider__btn">
-                                            <a href="#form" class="order-btn">Заказать</a>
+                                            <a href="#" data-scroll-to="6" class="order-btn">Заказать</a>
                                         </div>
                                     </div>
                                 </div>
@@ -355,7 +355,7 @@
                                             рублей
                                         </div>
                                         <div class="slider__btn">
-                                            <a href="#form" class="order-btn">Заказать</a>
+                                            <a href="#" data-scroll-to="6" class="order-btn">Заказать</a>
                                         </div>
                                     </div>
                                 </div>
@@ -457,7 +457,7 @@
                                             рублей
                                         </div>
                                         <div class="slider__btn">
-                                            <a href="#form" class="order-btn">Заказать</a>
+                                            <a href="#" data-scroll-to="6" class="order-btn">Заказать</a>
                                         </div>
                                     </div>
                                 </div>
@@ -559,7 +559,7 @@
                                             рублей
                                         </div>
                                         <div class="slider__btn">
-                                            <a href="#form" class="order-btn">Заказать</a>
+                                            <a href="#" data-scroll-to="6" class="order-btn">Заказать</a>
                                         </div>
                                     </div>
                                 </div>
@@ -661,7 +661,7 @@
                                             рублей
                                         </div>
                                         <div class="slider__btn">
-                                            <a href="#form" class="order-btn">Заказать</a>
+                                            <a href="#" data-scroll-to="6" class="order-btn">Заказать</a>
                                         </div>
                                     </div>
                                 </div>
@@ -940,20 +940,20 @@
         <section class="section form">
             <div class="container" id="form">
                 <h2 class="section__title section__title_center section__title_margin-bottom">Закажите доставку</h2>
-                <form action="" class="form__wrapper">
+                <form action="server.php" method="post" class="form__wrapper">
                     <div class="form__left">
                         <div class="form__row">
                             <label class="form__block">
                                 <div class="form__title">
                                     Имя
                                 </div>
-                                <input type="text" class="form__input">
+                                <input type="text" name="user-name" class="form__input" required>
                             </label>
                             <label class="form__block">
                                 <div class="form__title">
                                     Телефон
                                 </div>
-                                <input type="text" class="form__input form__input_active" placeholder="89212264923">
+                                <input type="text" class="form__input form__input_active" name="phone" placeholder="89212264923" required>
                             </label>
                         </div>
                         <div class="form__row">
@@ -961,7 +961,7 @@
                                 <div class="form__title">
                                     Улица
                                 </div>
-                                <input type="text" class="form__input">
+                                <input type="text" name="street" class="form__input">
                             </label>
                         </div>
                         <div class="form__row">
@@ -969,25 +969,25 @@
                                 <div class="form__title">
                                     Дом
                                 </div>
-                                <input type="text" class="form__input">
+                                <input type="number" name="house" class="form__input" required>
                             </label>
                             <label class="form__block">
                                 <div class="form__title">
                                     Корпус
                                 </div>
-                                <input type="text" class="form__input">
+                                <input type="text" name="case" class="form__input" required>
                             </label>
                             <label class="form__block">
                                 <div class="form__title">
                                     Квартира
                                 </div>
-                                <input type="text" class="form__input">
+                                <input type="number" name="flat" class="form__input" required>
                             </label>
                             <label class="form__block">
                                 <div class="form__title">
                                     Этаж
                                 </div>
-                                <input type="text" class="form__input">
+                                <input type="number" name="floor" class="form__input" required>
                             </label>
                         </div>
                     </div>
@@ -997,32 +997,42 @@
                                 <div class="form__title">
                                     Комментарий
                                 </div>
-                                <textarea name="text" class="form__textarea"></textarea>
+                                <textarea name="message" class="form__textarea"></textarea>
                             </label>
                         </div>
                         <div class="form__right_btns">
                             <div class="form__row">
                                 <label class="form__block form__block_label">
-                                    <input type="radio" class="form__hidden" name="radio">
+                                    <input type="radio" class="form__hidden" name="delivery">
                                     <span class="form__radio"></span>
                                     <div class="form__title">Потребуется сдача</div>
                                 </label>
                                 <label class="form__block form__block_label">
-                                    <input type="radio" class="form__hidden" checked="checked" name="radio">
+                                    <input type="radio" class="form__hidden" checked="checked" name="card">
                                     <span class="form__radio"></span>
                                     <div class="form__title">Оплата по карте</div>
                                 </label>
                             </div>
                             <div class="form__row">
                                 <label class="form__block form__block_label">
-                                    <input type="checkbox" class="form__hidden" checked="checked">
+                                    <input type="checkbox" class="form__hidden" checked="checked" name="dont-disturb">
                                     <span class="form__checkbox"></span>
                                     <div class="form__title">Не перезванивать</div>
                                 </label>
                             </div>
                             <div class="form__row">
-                                <a href="#form" class="order-btn">Заказать</a>
-                                <a href="#" class="order-btn order-btn_reset">Очистить</a>
+                                <button type="submit" class="order-btn form__btn">Заказать</button>
+                                <button type="reset" class="order-btn order-btn_reset">Очистить</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal">
+                        <div class="modal__container">
+                            <div class="modal__content">
+                                        <span class="modal__text">
+                                            Сообщение отправленно
+                                        </span>
+                                <button type="submit" class="order-btn modal__btn">Закрыть</button>
                             </div>
                         </div>
                     </div>
@@ -1030,6 +1040,7 @@
             </div>
         </section>
         <section class="section map">
+            <div id="map"></div>
             <footer class="footer">
                 <div class="container">
                     <div class="footer__content">
@@ -1130,6 +1141,11 @@
 <script src="scripts/slider.js"></script>
 <script src="scripts/popup.js"></script>
 <script src="scripts/onepagescroll.js"></script>
+<script src="scripts/admin.js"></script>
+<script src="scripts/map.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBPB8Rsj5znPecqrLHRkx3aRUjOJSh0z8E&callback=initMap"
+        async defer>
+</script>
 </body>
 
 </html>

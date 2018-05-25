@@ -92,6 +92,12 @@ h1, h2, h3, h4, h5, p {
   padding: 0;
   font-weight: normal; }
 
+button {
+  text-decoration: none;
+  outline: none;
+  border: none;
+  cursor: pointer; }
+
 input, textarea {
   outline: none; }
 
@@ -320,6 +326,48 @@ table {
     color: #2f3234;
     margin-bottom: 1.25rem; }
   .popup__text {
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    font-family: 'Ubuntu', Helvetica, sans-serif;
+    font-weight: 300;
+    color: #2f3234; }
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(47, 50, 52, 0.92);
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 10000; }
+  .modal__active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .modal__container {
+    position: relative; }
+  .modal__content {
+    width: 16.875rem;
+    background: #fff;
+    border-radius: 0.25rem;
+    padding: 1.25rem;
+    text-align: center; }
+    @media screen and (max-width: 768px) {
+      .modal__content {
+        padding-right: 2.5rem; } }
+    @media screen and (max-width: 480px) {
+      .modal__content {
+        padding-right: 2.5rem; } }
+  .modal__btn {
+    margin: 1.25rem auto 0; }
+  .modal__text {
     font-size: 0.875rem;
     line-height: 1.5rem;
     font-family: 'Ubuntu', Helvetica, sans-serif;
@@ -959,8 +1007,11 @@ table {
         width: 4rem; } }
 
 .map {
-  background: url("../img/content/map.jpg") center center/cover no-repeat;
-  position: relative; }
+  position: relative;
+  width: 100%; }
+
+#map {
+  height: 100%; }
 
 .form {
   background: url("../img/bg/bg_form.jpg") center center/cover no-repeat;
@@ -1029,7 +1080,9 @@ table {
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center; }
-      .form__block_label input:checked ~ .form__radio::after, .form__block_label .form__checkbox::after {
+      .form__block_label input:checked ~ .form__radio::after {
+        display: block; }
+      .form__block_label input:checked ~ .form__checkbox::after {
         display: block; }
       .form__block_label .form__radio::after {
         position: absolute;
@@ -1154,7 +1207,7 @@ table {
         -ms-flex-align: center;
             align-items: center;
     width: 100%;
-    padding: 0.625rem 0; }
+    padding: 0.4375rem 0; }
     @media screen and (max-width: 480px) {
       .footer__content {
         -webkit-box-orient: vertical;

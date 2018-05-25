@@ -59,9 +59,14 @@
       display: flex;
       align-items: center;
 
-      input:checked ~ .form__radio::after, .form__checkbox::after {
+      input:checked ~ .form__radio::after {
         display: block;
       }
+
+      input:checked ~ .form__checkbox::after {
+        display: block;
+      }
+
 
       .form__radio::after {
         position: absolute;
