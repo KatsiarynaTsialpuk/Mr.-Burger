@@ -21,6 +21,7 @@ const header = document.querySelector('.intro__header');
 window.onscroll = function () {
     if (document.documentElement.clientWidth <= 768) {
         header.style.backgroundColor = "rgba(0, 0, 0, .7)";
+        document.body.appendChild(header);
     }
 
     else {

@@ -38,12 +38,13 @@
 
     const form = document.querySelector('.form__wrapper');
     const orderBtn = document.querySelector('.form__btn');
-    orderBtn.addEventListener('click', function (event) {
+   if(orderBtn.addEventListener('click', function (event) {
         event.preventDefault();
-
-        const modal = document.querySelector('.modal');
-        modal.classList.add('modal__active');
-    });
+    })) {
+       const modal = document.querySelector('.modal');
+       modal.classList.add('modal__active');
+   } else if () 
+    
 
             // let request = $.ajax({
             //     type: type,

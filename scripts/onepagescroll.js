@@ -1,8 +1,8 @@
 const sections = $('.section');
 const display = $('.maincontent');
 let inScroll = false;
-const mobileDetect = new MobileDetect(window.navigator.userAgent);
-const isMobile = mobileDetect.mobile();
+// const mobileDetect = new MobileDetect(window.navigator.userAgent);
+// const isMobile = mobileDetect.mobile();
 const setActiveMenuItem = itemEq => {
     $('.pagination__item')
         .eq(itemEq)
@@ -34,7 +34,7 @@ const performTransition = sectionEq => {
     setTimeout(() => {
         inScroll = false;
         setActiveMenuItem(sectionEq);
-    }, transitionDuration + 300); //за 300мс проходит инерция мышки
+    }, transitionDuration + 100); //за 300мс проходит инерция мышки
 };
 
 const scrollToSection = direction => {
@@ -72,10 +72,10 @@ $(document).on({
                 scrollToSection('up');
                 break;
         }
-    },
-    touchmove: e => {
-        e.preventDefault();
     }
+    // touchmove: e => {
+    //     e.preventDefault();
+    // }
 });
 
 //arrow-down
@@ -93,11 +93,20 @@ $('[data-scroll-to]').on('click', e => {
 });
 
 //mobile
-if (isMobile) {
-    $(document).swipe({
-        swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
-            const swipeDirection = direction === 'down' ? 'up' : 'down';
-            scrollToSection(swipeDirection);
-        }
-    });
+if(document.innerWidth <= 768) {
+    scrollToSection(null);
 }
+
+// if (isMobile) {
+//     scrollToSection(null);
+// }
+
+
+// if (isMobile) {
+//     $(document).swipe({
+//         swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
+//             const swipeDirection = direction === 'down' ? 'up' : 'down';
+//             scrollToSection(swipeDirection);
+//         }
+//     });
+// }

@@ -113,6 +113,12 @@ table {
   height: 100%;
   position: relative;
   overflow: hidden; }
+  @media screen and (max-width: 768px) {
+    .wrapper {
+      overflow: visible; } }
+  @media screen and (max-width: 480px) {
+    .wrapper {
+      overflow: visible; } }
 
 .maincontent {
   height: 100%;
@@ -346,6 +352,7 @@ table {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100%;
   z-index: 10000; }
   .modal__active {
     display: -webkit-box;
@@ -426,7 +433,7 @@ table {
           align-items: center;
   margin-right: 0.625rem;
   margin-left: 2.1875rem;
-  z-index: 1000;
+  z-index: 1000000000;
   display: none; }
   .hamburger__element {
     display: -webkit-box;

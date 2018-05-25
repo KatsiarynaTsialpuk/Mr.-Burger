@@ -40,7 +40,7 @@ function initMap() {
             icon: icons[feature.type].icon,
             map: map,
             draggable: true,
-            // animation: google.maps.Animation.BOUNCE
+            animation: google.maps.Animation.DROP
         });
     });
 }
