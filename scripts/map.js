@@ -3,7 +3,11 @@ function initMap() {
     let map = new google.maps.Map(document.getElementById('map'), {
         zoom: 11,
         center: myLatLng,
-        mapTypeId: 'roadmap'
+        mapTypeId: 'roadmap',
+        zoomControl: true,
+        zoomControlOptions: {
+            position: google.maps.ControlPosition.RIGHT_TOP
+        }
     });
 
     let iconBase = './img/icons/';
