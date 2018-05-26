@@ -34,7 +34,7 @@ const performTransition = sectionEq => {
     setTimeout(() => {
         inScroll = false;
         setActiveMenuItem(sectionEq);
-    }, transitionDuration + 100); //за 300мс проходит инерция мышки
+    }, transitionDuration + 100); //за 100мс проходит инерция мышки
 };
 
 const scrollToSection = direction => {
@@ -95,6 +95,7 @@ $('[data-scroll-to]').on('click', e => {
 //mobile
 if(document.innerWidth <= 768) {
     scrollToSection(null);
+
 }
 
 // if (isMobile) {

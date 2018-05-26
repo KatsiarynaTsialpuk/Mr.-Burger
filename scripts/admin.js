@@ -36,33 +36,40 @@
 //     })
 // };
 
-    const form = document.querySelector('.form__wrapper');
-    const orderBtn = document.querySelector('.form__btn');
-   if(orderBtn.addEventListener('click', function (event) {
-        event.preventDefault();
-    })) {
-       const modal = document.querySelector('.modal');
-       modal.classList.add('modal__active');
-   } else if () 
-    
+const form = document.querySelector('.form__wrapper');
+const orderBtn = document.querySelector('.form__btn');
+const closeBtn = document.querySelector('.modal__btn');
+orderBtn.addEventListener('click', function (event) {
+    event.preventDefault();
 
-            // let request = $.ajax({
-            //     type: type,
-            //     url: url,
-            //     data: data,
-            //     dataType: 'JSON'
-            // });
+    const modal = document.querySelector('.modal');
+    modal.classList.add('modal__active');
+});
 
-            // request.done(function (message) {
-            //     let text = message.text;
-            //     let status = message.status;
-            //
-            //     if (status === 'OK') {
-            //         const modal = document.querySelector('.modal');
-            //         modal.classList.add('modal__active');
-            //     }
-            // });
-            //
-            // request.fail(function(jqXHR, textStatus) {
-            //     alert('Request failed:' + textStatus);
-            // });
+closeBtn.addEventListener('click', function (event) {
+    event.preventDefault();
+
+    const modal = document.querySelector('.modal');
+    modal.classList.remove('modal__active');
+});
+
+// let request = $.ajax({
+//     type: type,
+//     url: url,
+//     data: data,
+//     dataType: 'JSON'
+// });
+
+// request.done(function (message) {
+//     let text = message.text;
+//     let status = message.status;
+//
+//     if (status === 'OK') {
+//         const modal = document.querySelector('.modal');
+//         modal.classList.add('modal__active');
+//     }
+// });
+//
+// request.fail(function(jqXHR, textStatus) {
+//     alert('Request failed:' + textStatus);
+// });
