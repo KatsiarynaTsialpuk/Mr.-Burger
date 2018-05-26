@@ -2,4 +2,4 @@
 <b>Author:</b> Telpuk Ekaterina<br>
 <b>Teacher:</b> Alexandr Nesvit<br>
 <b>Create:</b> April - May 2018<br>
-<b>Technologies:</b> Flexbox, SASS, Javascript, Jquery, AJAX
+<b>Technologies:</b> Flexbox, SASS, Javascript, Jquery, AJAX, Google maps, Responsive
