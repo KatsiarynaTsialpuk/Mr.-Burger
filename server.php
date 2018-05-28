@@ -4,7 +4,7 @@ $name = $_POST['user-name'];
 $phone = $_POST['phone'];
 $street = $_POST['street'];
 $house = $_POST['house'];
-$case = $_POST['case'];
+$building = $_POST['building'];
 $flat = $_POST['flat'];
 $floor = $_POST['floor'];
 $message = $_POST['message'];
@@ -28,7 +28,7 @@ $mail_message = '
             <li><b>Телефон:</b>' . $phone . '</li>
             <li><b>Улица:</b>' . $street . '</li>
             <li><b>Дом:</b>' . $house . '</li>
-            <li><b>Подъезд:</b>' . $case . '</li>
+            <li><b>Подъезд:</b>' . $building . '</li>
             <li><b>Квартира:</b>' . $flat . '</li>
             <li><b>Этаж:</b>' . $floor . '</li>
             <li><b>Комментарий:</b>' . $message . '</li>

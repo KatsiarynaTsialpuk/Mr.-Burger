@@ -1,8 +1,6 @@
 const sections = $('.section');
 const display = $('.maincontent');
 let inScroll = false;
-// const mobileDetect = new MobileDetect(window.navigator.userAgent);
-// const isMobile = mobileDetect.mobile();
 const setActiveMenuItem = itemEq => {
     $('.pagination__item')
         .eq(itemEq)
@@ -73,9 +71,6 @@ $(document).on({
                 break;
         }
     }
-    // touchmove: e => {
-    //     e.preventDefault();
-    // }
 });
 
 //arrow-down
@@ -84,30 +79,26 @@ $('.arrow__link').on('click', e => {
     scrollToSection('down');
 });
 
-//keudown
-$('[data-scroll-to]').on('click', e => {
-    e.preventDefault();
 
-    const target = parseInt($(e.currentTarget).attr('data-scroll-to'));
-    performTransition(target);
-});
+//keydown
+    $('[data-scroll-to]').on('click', e => {
+        e.preventDefault();
+
+        const target = parseInt($(e.currentTarget).attr('data-scroll-to'));
+        performTransition(target);
+    });
 
 //mobile
 if(document.innerWidth <= 768) {
-    scrollToSection(null);
+    scrollToSection.bind();
 
+    $('a[data-scroll-to]').click(function(e) {
+        e.preventDefault();
+        let offset = 10;
+        let target = ( '#' + $(this).data('scroll-to') );
+        let $target = $(target);
+        $(document).stop().animate({
+            'scrollTop': $target.offset().top - offset
+        }, 800, 'swing');
+    });
 }
-
-// if (isMobile) {
-//     scrollToSection(null);
-// }
-
-
-// if (isMobile) {
-//     $(document).swipe({
-//         swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
-//             const swipeDirection = direction === 'down' ? 'up' : 'down';
-//             scrollToSection(swipeDirection);
-//         }
-//     });
-// }

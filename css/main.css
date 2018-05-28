@@ -178,7 +178,7 @@ table {
 .order-btn {
   font-size: 0.8125rem;
   line-height: 1.25rem;
-  min-width: 6.125rem;
+  width: 6.125rem;
   padding: 0.5rem 1.0625rem;
   border-radius: 5px;
   background-color: #e45028;
@@ -361,25 +361,30 @@ table {
   .modal__container {
     position: relative; }
   .modal__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: 16.875rem;
     background: #fff;
     border-radius: 0.25rem;
     padding: 1.25rem;
     text-align: center; }
-    @media screen and (max-width: 768px) {
-      .modal__content {
-        padding-right: 2.5rem; } }
-    @media screen and (max-width: 480px) {
-      .modal__content {
-        padding-right: 2.5rem; } }
-  .modal__btn {
-    margin: 1.25rem auto 0; }
   .modal__text {
     font-size: 0.875rem;
     line-height: 1.5rem;
     font-family: 'Ubuntu', Helvetica, sans-serif;
     font-weight: 300;
-    color: #2f3234; }
+    color: #2f3234;
+    margin-bottom: 1.25rem; }
+    .modal__text_error {
+      color: #e45028; }
 
 .logo {
   z-index: 1000; }

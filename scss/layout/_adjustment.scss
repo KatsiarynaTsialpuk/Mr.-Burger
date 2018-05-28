@@ -81,7 +81,7 @@
   @include font-size(13);
   @include line-height(20);
 
-  min-width: rem(98px);
+  width: rem(98px);
   padding: rem(8px) rem(17px);
   border-radius: 5px;
   background-color: $orange;
@@ -303,23 +303,14 @@
   }
 
   &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: rem(270px);
     background: $white;
     border-radius: rem(4px);
     padding: rem(20px);
     text-align: center;
-
-    @include tablet {
-      padding-right: rem(40px);
-    }
-
-    @include phone {
-      padding-right: rem(40px);
-    }
-  }
-
-  &__btn {
-    margin: rem(20px) auto 0;
   }
 
   &__text {
@@ -328,5 +319,10 @@
     @include ubuntu(light);
 
     color: $gray;
+    margin-bottom: rem(20px);
+
+    &_error {
+        color: $orange;
+    }
   }
 }

@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <title>Mr. Burger</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
@@ -13,7 +14,7 @@
 <body>
 <div class="wrapper">
     <div class="maincontent">
-        <section class="section intro active">
+        <section class="section intro active" id="0">
             <div class="container intro__container">
                 <header class="intro__header">
                     <div class="logo">
@@ -55,6 +56,9 @@
                     <div class="hamburger__menu">
                         <ul class="hamburger__list">
                             <li class="hamburger__item">
+                                <a href="#" data-scroll-to="0" class="hamburger__item_link">Главная</a>
+                            </li>
+                            <li class="hamburger__item">
                                 <a href="#" data-scroll-to="1" class="hamburger__item_link">О нас</a>
                             </li>
                             <li class="hamburger__item">
@@ -91,7 +95,7 @@
                 </div>
             </div>
         </section>
-        <section class="section about" id="about">
+        <section class="section about" id="1">
             <div class="container">
                 <h2 class="section__title section__title_gray section__title_margin-bottom">Мы лучшие</h2>
                 <ul class="about__list">
@@ -147,7 +151,7 @@
                 </ul>
             </div>
         </section>
-        <section class="section slider">
+        <section class="section slider" id="2">
             <div class="container">
                 <div class="slider__wrapper">
                     <div class="slider__arrow">
@@ -675,7 +679,7 @@
                 </div>
             </div>
         </section>
-        <section class="section team" id="team">
+        <section class="section team" id="3">
             <div class="team__wrapper">
                 <h2 class="section__title section__title_margin-bottom">
                     Команда
@@ -756,7 +760,7 @@
                 </ul>
             </div>
         </section>
-        <section class="section menu" id="menu">
+        <section class="section menu" id="4">
             <h2 class="section__title section__title_white section__title_absolute">Меню</h2>
             <ul class="menu__accordeon">
                 <li class="menu__content menu__content_active">
@@ -821,7 +825,7 @@
                 </li>
             </ul>
         </section>
-        <section class="section reviews" id="reviews">
+        <section class="section reviews" id="5">
             <ul class="reviews__list">
                 <li class="reviews__item">
                     <div class="review">
@@ -937,23 +941,23 @@
                 </li>
             </ul>
         </section>
-        <section class="section form">
+        <section class="section form" id="6">
             <div class="container" id="form">
                 <h2 class="section__title section__title_center section__title_margin-bottom">Закажите доставку</h2>
-                <form action="server.php" method="post" class="form__wrapper">
+                <form action="server.php" method="post" class="form__wrapper" id="order-form">
                     <div class="form__left">
                         <div class="form__row">
                             <label class="form__block">
                                 <div class="form__title">
                                     Имя
                                 </div>
-                                <input type="text" name="user-name" class="form__input" required>
+                                <input type="text" name="user-name" class="form__input"  min="2" max="20" required>
                             </label>
                             <label class="form__block">
                                 <div class="form__title">
                                     Телефон
                                 </div>
-                                <input type="text" class="form__input form__input_active" name="phone"
+                                <input type="text" class="form__input form__input_active" name="phone"  min="7" max="20"
                                        placeholder="89212264923" required>
                             </label>
                         </div>
@@ -976,7 +980,7 @@
                                 <div class="form__title">
                                     Корпус
                                 </div>
-                                <input type="number" name="case" class="form__input" required>
+                                <input type="number" name="building" class="form__input" required>
                             </label>
                             <label class="form__block">
                                 <div class="form__title">
@@ -1009,7 +1013,7 @@
                                     <div class="form__title">Потребуется сдача</div>
                                 </label>
                                 <label class="form__block form__block_label">
-                                    <input type="radio" class="form__hidden" checked="checked" name="card">
+                                    <input type="radio" class="form__hidden" name="card">
                                     <span class="form__radio"></span>
                                     <div class="form__title">Оплата по карте</div>
                                 </label>
@@ -1030,7 +1034,7 @@
                 </form>
             </div>
         </section>
-        <section class="section map">
+        <section class="section map" id="7">
             <div id="map"></div>
             <footer class="footer">
                 <div class="container">
@@ -1114,11 +1118,10 @@
         </ul>
     </div>
 </div>
-<div class="modal">
+<div class="modal" id="modal">
     <div class="modal__container">
         <div class="modal__content">
             <span class="modal__text">
-                Сообщение отправленно
             </span>
             <button type="submit" class="order-btn modal__btn">Закрыть</button>
         </div>
@@ -1135,8 +1138,6 @@
     </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>-->
-<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.1/mobile-detect.min.js"></script>-->
 <script src="scripts/sidenav.js"></script>
 <script src="scripts/accordeon.js"></script>
 <script src="scripts/slider.js"></script>
