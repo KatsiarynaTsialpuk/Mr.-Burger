@@ -4,7 +4,7 @@
   "description": "<b>Project for Loftschool course \"Web-development for Beginner\"</b><br>\r <b>Author:</b> Telpuk Ekaterina<br>\r <b>Teacher:</b> Alexandr Nesvit<br>\r <b>Create:</b> April - May 2018<br>\r <b>Technologies:</b> Flexbox, SASS, Javascript, Jquery, AJAX, Google maps, Responsive",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "gulp"
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,47 @@
   "bugs": {
     "url": "https://github.com/KatsiarynaTsialpuk/MrBurger/issues"
   },
-  "homepage": "https://github.com/KatsiarynaTsialpuk/MrBurger#readme"
+  "homepage": "https://github.com/KatsiarynaTsialpuk/MrBurger#readme",
+  "devDependencies": {
+    "autoprefixer": "^8.5.1",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "browser-sync": "^2.24.4",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.1",
+    "gulp-cleancss": "^0.2.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-plumber": "^1.2.0",
+    "gulp-postcss": "^7.0.1",
+    "gulp-rename": "^1.2.3",
+    "gulp-replace": "^1.0.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-svgmin": "^1.2.4",
+    "gulp-svgstore": "^6.1.1",
+    "gulp-uglify": "^3.0.0"
+  },
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.1",
+    "gulp-cleancss": "^0.2.2",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-plumber": "^1.2.0",
+    "gulp-rename": "^1.2.3",
+    "gulp-postcss": "^7.0.1",
+    "gulp-replace": "^1.0.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-sass-glob": "^1.0.9",
+    "gulp-svgmin": "^1.2.4",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify": "^3.0.0",
+    "gulp-svgstore": "^6.1.1",
+    "jquery": "^3.3.1"
+  }
 }
