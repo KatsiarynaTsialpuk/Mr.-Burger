@@ -2,25 +2,25 @@ let markersData = [
     {
         lat: 59.891863,
         lng:  30.316093,
-        icon: "/app/img/icons/map_marker.png",
+        icon: "app/img/icons/map_marker.png",
         address: "Ташкентская ул., 1",
     },
     {
         lat: 59.920203,
         lng:  30.493471,
-        icon: "/app/img/icons/map_marker.png",
+        icon: "app/img/icons/map_marker.png",
         address: "пр. Солидарности",
     },
     {
         lat: 59.948200,
         lng: 30.388798,
-        icon: "/app/img/icons/map_marker.png",
+        icon: "app/img/icons/map_marker.png",
         address: "Шпалерная ул., 55",
     },
     {
         lat: 59.973066,
         lng: 30.313054,
-        icon: "/app/img/icons/map_marker.png",
+        icon: "app/img/icons/map_marker.png",
         address: "Петроградский р-н"
     }
 ];
