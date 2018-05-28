@@ -1,0 +1,20 @@
+{
+  "name": "MrBurger",
+  "version": "1.0.0",
+  "description": "<b>Project for Loftschool course \"Web-development for Beginner\"</b><br>\r <b>Author:</b> Telpuk Ekaterina<br>\r <b>Teacher:</b> Alexandr Nesvit<br>\r <b>Create:</b> April - May 2018<br>\r <b>Technologies:</b> Flexbox, SASS, Javascript, Jquery, AJAX, Google maps, Responsive",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KatsiarynaTsialpuk/MrBurger.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KatsiarynaTsialpuk/MrBurger/issues"
+  },
+  "homepage": "https://github.com/KatsiarynaTsialpuk/MrBurger#readme"
+}

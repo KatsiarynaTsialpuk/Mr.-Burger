@@ -59,7 +59,7 @@ class SendForm {
         if (resBody.status === 'OK') {
             this.showPopup(true, resBody.mes);
         } else {
-            this.showPopup(false, resBody.mes);
+            this.showPopup(true, resBody.mes);
         }
     }
 
