@@ -24,7 +24,7 @@ const svgstore = require('gulp-svgstore');
 const svgmin = require('gulp-svgmin');
 
 const paths =  {
-    src: './src/',              // paths.src
+    src: './app/',              // paths.src
     build: './build/'           // paths.build
 };
 
@@ -48,7 +48,7 @@ function styles() {
 }
 
 function svgSprite() {
-    return gulp.src(paths.src + 'svg/*.svg')
+    return gulp.app(paths.app + 'svg/*.svg')
         .pipe(svgmin(function (file) {
             return {
                 plugins: [{
@@ -64,18 +64,18 @@ function svgSprite() {
 }
 
 function scripts() {
-    return gulp.src(paths.src + 'js/*.js')
+    return gulp.src(paths.src + 'scripts/*.js')
         .pipe(plumber())
         .pipe(babel({
             presets: ['env']
         }))
         .pipe(uglify())
         .pipe(concat('script.min.js'))
-        .pipe(gulp.dest(paths.build + 'js/'))
+        .pipe(gulp.dest(paths.build + 'scripts/'))
 }
 
 function htmls() {
-    return gulp.src(paths.src + '*.html')
+    return gulp.app(paths.app + '*.html')
         .pipe(plumber())
         .pipe(replace(/\n\s*<!--DEV[\s\S]+?-->/gm, ''))
         .pipe(gulp.dest(paths.build));
@@ -86,9 +86,9 @@ function clean() {
 }
 
 function watch() {
-    gulp.watch(paths.src + 'scss/*.scss', styles);
-    gulp.watch(paths.src + 'js/*.js', scripts);
-    gulp.watch(paths.src + '*.html', htmls);
+    gulp.watch(paths.app + 'scss/*.scss', styles);
+    gulp.watch(paths.app + 'scripts/*.js', scripts);
+    gulp.watch(paths.app + '*.html', htmls);
 }
 
 function serve() {
@@ -109,9 +109,6 @@ exports.watch = watch;
 
 gulp.task('build', gulp.series(
     clean,
-    // styles,
-    // scripts,
-    // htmls
     gulp.parallel(styles, svgSprite, scripts, htmls)
 ));
 

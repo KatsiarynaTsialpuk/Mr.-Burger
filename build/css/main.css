@@ -1,38 +1,38 @@
 @charset "UTF-8";
 @font-face {
   font-family: 'Ubuntu';
-  src: url("../fonts/ubuntu-b-webfont.woff2") format("woff2");
-  src: url("../fonts/ubuntu-b-webfont.woff") format("woff");
+  src: url("/app/fonts/ubuntu-b-webfont.woff2") format("woff2");
+  src: url("/app/fonts/ubuntu-b-webfont.woff") format("woff");
   font-weight: 900;
   font-style: normal; }
 @font-face {
   font-family: 'Ubuntu';
-  src: url("../fonts/ubuntu-light-webfont.woff2") format("woff2");
-  src: url("../fonts/ubuntu-light-webfont.woff") format("woff");
+  src: url("/app/fonts/ubuntu-light-webfont.woff2") format("woff2");
+  src: url("/app/fonts/ubuntu-light-webfont.woff") format("woff");
   font-weight: 300;
   font-style: normal; }
 @font-face {
   font-family: 'Ubuntu';
-  src: url("../fonts/ubuntu-medium-webfont.woff2") format("woff2");
-  src: url("../fonts/ubuntu-medium-webfont.woff") format("woff");
+  src: url("/app/fonts/ubuntu-medium-webfont.woff2") format("woff2");
+  src: url("/app/fonts/ubuntu-medium-webfont.woff") format("woff");
   font-weight: 700;
   font-style: normal; }
 @font-face {
   font-family: 'Ubuntu';
-  src: url("../fonts/ubuntu-regular-webfont.woff2") format("woff2");
-  src: url("../fonts/ubuntu-regular-webfont.woff") format("woff");
+  src: url("/app/fonts/ubuntu-regular-webfont.woff2") format("woff2");
+  src: url("/app/fonts/ubuntu-regular-webfont.woff") format("woff");
   font-weight: 500;
   font-style: normal; }
 @font-face {
   font-family: 'Gagalin';
-  src: url("../fonts/gagalin-regular-webfont.woff2") format("woff2");
-  src: url("../fonts/gagalin-regular-webfont.woff") format("woff");
+  src: url("/app/fonts/gagalin-regular-webfont.woff2") format("woff2");
+  src: url("/app/fonts/gagalin-regular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 @font-face {
   font-family: 'Lifehack';
-  src: url("../fonts/lifehack_medium-webfont.woff2") format("woff2");
-  src: url("../fonts/lifehack_medium-webfont.woff") format("woff");
+  src: url("/app/fonts/lifehack_medium-webfont.woff2") format("woff2");
+  src: url("/app/fonts/lifehack_medium-webfont.woff") format("woff");
   font-weight: 700;
   font-style: normal; }
 *, *::before, *::after {
@@ -559,7 +559,7 @@ table {
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url("../img/bg/bg_main.jpg");
+  background-image: url("/app/img/bg/bg_main.jpg");
   position: relative; }
   .intro__header {
     width: 100%;
@@ -665,7 +665,7 @@ table {
     margin-left: auto; } }
 
 .about {
-  background: url("../img/bg/bg_about.jpg") center center/cover no-repeat;
+  background: url("/app/img/bg/bg_about.jpg") center center/cover no-repeat;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -909,7 +909,7 @@ table {
               transform: rotate(180deg); }
 
 .team {
-  background: url("../img/bg/bg_team.jpg") center center/cover no-repeat;
+  background: url("/app/img/bg/bg_team.jpg") center center/cover no-repeat;
   position: relative; }
   .team__wrapper {
     width: 50%;
@@ -946,7 +946,7 @@ table {
             justify-content: center; }
 
 .menu {
-  background: url("../img/bg/bg_menu.jpg") center center/cover no-repeat;
+  background: url("/app/img/bg/bg_menu.jpg") center center/cover no-repeat;
   position: relative; }
   .menu__accordeon {
     display: -webkit-box;
@@ -1026,7 +1026,7 @@ table {
   height: 100%; }
 
 .form {
-  background: url("../img/bg/bg_form.jpg") center center/cover no-repeat;
+  background: url("/app/img/bg/bg_form.jpg") center center/cover no-repeat;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
@@ -1207,7 +1207,7 @@ table {
     margin-right: 0.625rem; }
 
 .footer {
-  background: url("../img/bg/bg_footer.jpg") center center/cover no-repeat; }
+  background: url("/app/img/bg/bg_footer.jpg") center center/cover no-repeat; }
   .footer__content {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1261,7 +1261,7 @@ table {
     width: 55rem;
     overflow: hidden; }
   .slider__link {
-    background: url("../img/icons/arrow.png") center center/cover no-repeat;
+    background: url("/app/img/icons/arrow.png") center center/cover no-repeat;
     display: block;
     width: 1.875rem;
     height: 0.9375rem; }

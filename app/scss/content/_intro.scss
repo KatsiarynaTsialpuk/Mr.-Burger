@@ -5,7 +5,7 @@
 .intro {
   @include bg();
 
-  background-image: url("../img/bg/bg_main.jpg");
+  background-image: url("/app/img/bg/bg_main.jpg");
   position: relative;
 
   &__header {
