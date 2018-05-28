@@ -35,14 +35,14 @@ class SendForm {
     }
 
     async ajaxForm() {
-        const name = this.form.querySelector('input[name="name"]').value;
+        const name = this.form.querySelector('input[name="user-name"]').value;
         const phone = this.form.querySelector('input[name="phone"]').value;
         const street = this.form.querySelector('input[name="street"]').value;
         const house = this.form.querySelector('input[name="house"]').value;
         const building = this.form.querySelector('input[name="building"]').value;
         const flat = this.form.querySelector('input[name="flat"]').value;
         const floor = this.form.querySelector('input[name="floor"]').value;
-        const message = this.form.querySelector('input[name="message"]').value;
+        const message = this.form.querySelector('textarea[name="message"]').value;
         const delivery = this.form.querySelector('input[name="delivery"]').value;
         const card = this.form.querySelector('input[name="card"]').value;
         const dontdisturb = this.form.querySelector('input[name="dont-disturb"]').value;
