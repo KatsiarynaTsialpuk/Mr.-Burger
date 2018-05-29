@@ -1261,7 +1261,7 @@ table {
     width: 55rem;
     overflow: hidden; }
   .slider__link {
-    background: url("app/img/icons/arrow.png") center center/cover no-repeat;
+    background: url("../../app/img/icons/arrow.png") center center/cover no-repeat;
     display: block;
     width: 1.875rem;
     height: 0.9375rem; }

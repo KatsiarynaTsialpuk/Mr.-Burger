@@ -11,7 +11,7 @@
     "url": "git+https://github.com/KatsiarynaTsialpuk/MrBurger.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Katsiaryna Tsialpuk",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/KatsiarynaTsialpuk/MrBurger/issues"
@@ -36,27 +36,10 @@
     "gulp-sourcemaps": "^2.6.4",
     "gulp-svgmin": "^1.2.4",
     "gulp-svgstore": "^6.1.1",
-    "gulp-uglify": "^3.0.0"
+    "gulp-uglify": "^3.0.0",
+    "gulp-sass-glob": "^1.0.9"
   },
   "dependencies": {
-    "babel-core": "^6.26.3",
-    "babel-preset-env": "^1.7.0",
-    "del": "^3.0.0",
-    "gulp": "^3.9.1",
-    "gulp-babel": "^7.0.1",
-    "gulp-cleancss": "^0.2.2",
-    "gulp-group-css-media-queries": "^1.2.2",
-    "gulp-concat": "^2.6.1",
-    "gulp-plumber": "^1.2.0",
-    "gulp-rename": "^1.2.3",
-    "gulp-postcss": "^7.0.1",
-    "gulp-replace": "^1.0.0",
-    "gulp-sass": "^4.0.1",
-    "gulp-sass-glob": "^1.0.9",
-    "gulp-svgmin": "^1.2.4",
-    "gulp-sourcemaps": "^2.6.4",
-    "gulp-uglify": "^3.0.0",
-    "gulp-svgstore": "^6.1.1",
     "jquery": "^3.3.1"
   }
 }
